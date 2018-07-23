@@ -1,0 +1,14 @@
+{
+    "LANGUAGE": "Arabic Language",
+    "MENU_ITEMS": {
+        "DELIVERY_INFO": "معلومات التسليم",
+        "FOOD_CATEGORIES": "Food Categories",
+        "CART": "Cart",
+        "DELIVERY_CONFIRMATION": "Delivery Confirmation",
+        "PAYMENT": "Payment",
+        "DELIVERY_TRACKING": "Delivery Tracking",
+        "SETTINGS": "Settings",
+        "CONTACT": "Contact",
+        "ABOUT_US": "About Us"
+    }
+}
