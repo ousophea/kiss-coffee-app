@@ -49,11 +49,13 @@
   </button> -->
   <ion-list  padding>
 
-    <ion-item  *ngFor="let category of (categories | async)?.results" class="animated bounceInLeft" (click)="gotoCategoryItemList('BURGER')">
+    <!-- <ion-item ion-item *ngFor="let film of (films | async)?.results" class="animated bounceInLeft" (click)="gotoCategoryItemList('BURGER')"> -->
+      <ion-item  *ngFor="let user of users" class="animated bounceInLeft" (click)="gotoCategoryItemList('BURGER')">
+
       <ion-thumbnail item-start>
         <img src="assets/imgs/BURGER.png">
       </ion-thumbnail>
-      <h2> {{ category.title }}</h2>
+      <h2>{{user.title}}</h2>  
 
     </ion-item>
 
