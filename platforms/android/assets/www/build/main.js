@@ -22,55 +22,55 @@ webpackEmptyAsyncContext.id = 116;
 
 var map = {
 	"../pages/about-us/about-us.module": [
-		291,
-		12
-	],
-	"../pages/cart/cart.module": [
-		292,
+		293,
 		11
 	],
-	"../pages/contact/contact.module": [
-		293,
+	"../pages/cart/cart.module": [
+		294,
 		10
 	],
-	"../pages/delivery-confirmation/delivery-confirmation.module": [
-		294,
+	"../pages/contact/contact.module": [
+		295,
 		9
 	],
-	"../pages/delivery-tracking/delivery-tracking.module": [
-		295,
-		0
-	],
-	"../pages/first-landing/first-landing.module": [
+	"../pages/delivery-confirmation/delivery-confirmation.module": [
 		296,
 		8
 	],
-	"../pages/food-categories/food-categories.module": [
+	"../pages/delivery-tracking/delivery-tracking.module": [
 		297,
+		0
+	],
+	"../pages/first-landing/first-landing.module": [
+		299,
 		7
 	],
-	"../pages/food-category-items/food-category-items.module": [
+	"../pages/food-categories/food-categories.module": [
 		298,
 		6
 	],
-	"../pages/food-item-details/food-item-details.module": [
-		299,
+	"../pages/food-category-items/food-category-items.module": [
+		300,
 		5
 	],
+	"../pages/food-item-details/food-item-details.module": [
+		301,
+		12
+	],
 	"../pages/payment/payment.module": [
-		300,
+		302,
 		4
 	],
 	"../pages/second-landing/second-landing.module": [
-		301,
+		303,
 		3
 	],
 	"../pages/settings/settings.module": [
-		302,
+		304,
 		2
 	],
 	"../pages/user-information/user-information.module": [
-		303,
+		305,
 		1
 	]
 };
@@ -90,15 +90,417 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 205:
+/***/ 206:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+  Generated class for the ServiceProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var ServiceProvider = (function () {
+    // BASH_URL:string = "http://localhost:8000/api/";
+    function ServiceProvider(http) {
+        this.http = http;
+        this.BASH_URL = "http://www.dev-kiss.coffee.slor-ey.com/api/";
+        console.log('Hello ServiceProvider Provider');
+    }
+    ServiceProvider.prototype.getURL = function (url) {
+        // return new Promise(resolve => {
+        //   this.http.get(this.BASH_URL + url, {
+        //     // headers: new HttpHeaders().set('Authorization', 'my-auth-token'),
+        //     // params: new HttpParams().set('id', '3'),
+        //     headers: new HttpHeaders().append('Access-Control-Allow-Origin' , '*')
+        //     .append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT')
+        //     .append('Accept','application/json')
+        //     .append('content-type','application/json'),
+        //   })
+        //   .subscribe(data => {
+        //     return data;
+        //   }, err => {
+        //     console.log('errors tt',err);
+        //   });
+        // });
+        // return new Promise((resolve, reject) => {
+        //   let headers = new Headers();
+        // headers.append('Access-Control-Allow-Origin', '*');
+        // headers.append('Accept', 'application/x-www-form-urlencoded');
+        // headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        // headers.append('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        //   this.http.get(apiUrl + type +'?data='+ JSON.stringify(credentials).toString(), {headers: headers}).subscribe(res => {
+        //       resolve(res);
+        //     }, (err) => {
+        //       reject(err);
+        //     });
+        // });
+        return __WEBPACK_IMPORTED_MODULE_2_jquery__["ajax"]({
+            type: "GET",
+            // url:  this.apiUrl + type + '?APP_ID=' + this.APP_ID,             
+            url: this.BASH_URL + url,
+            contentType: 'application/json',
+            success: function (response) {
+                return response;
+            },
+            error: function (res, status, exception) {
+                console.log(res);
+            }
+        });
+    };
+    ServiceProvider.prototype.postURL = function (url, model) {
+        // this.http.post(this.BASH_URL + url, JSON.stringify(model), {
+        //   // headers: new HttpHeaders().set('Authorization', 'my-auth-token'),
+        //   // params: new HttpParams().set('id', '3'),
+        // })
+        // .subscribe(res => {
+        //   return res;
+        // }, (err) => {
+        //   console.log(err);
+        // });
+        // return new Promise((resolve, reject) => {
+        // let headers = new Headers();
+        // headers.append('Access-Control-Allow-Origin', '*');
+        // headers.append('Accept', 'application/x-www-form-urlencoded');
+        // headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        // headers.append('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        // this.http.post(apiUrl + type ,JSON.stringify(credentials) , {headers: headers}).subscribe(res => {
+        //     resolve(res);
+        //   }, (err) => {
+        //     reject(err);
+        //   });
+        // });
+        return __WEBPACK_IMPORTED_MODULE_2_jquery__["ajax"]({
+            type: "POST",
+            // url:  this.apiUrl + type + '?APP_ID=' + this.APP_ID,                        
+            url: this.BASH_URL + url,
+            data: model,
+            success: function (response) {
+                // console.log('result', response);
+                return response;
+            },
+            error: function (res, status, exception) {
+                console.log(res);
+            }
+        });
+    };
+    ServiceProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+    ], ServiceProvider);
+    return ServiceProvider;
+}());
+
+//# sourceMappingURL=service.js.map
+
+/***/ }),
+
+/***/ 207:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FoodItemDetailsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
+/**
+ * @author    Ionic Bucket <ionicbucket@gmail.com>
+ * @copyright Copyright (c) 2017
+ * @license   Fulcrumy
+ *
+ * This file represents a component of Food Item Details page
+ * File path - '../../../../src/pages/food-item-details/food-item-details'
+ */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var FoodItemDetailsPage = (function () {
+    function FoodItemDetailsPage(navCtrl, navParams, viewCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.viewCtrl = viewCtrl;
+        this.item = this.navParams.data;
+        console.log(this.item);
+    }
+    /**
+     * Dismiss function
+     * This function dismiss the popup modal
+     */
+    FoodItemDetailsPage.prototype.dismiss = function () {
+        this.viewCtrl.dismiss();
+    };
+    FoodItemDetailsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-food-item-details',template:/*ion-inline-start:"D:\Project\Ionic\KissCoffee\src\pages\food-item-details\food-item-details.html"*/'<!-- \n  - @author    Ionic Bucket <ionicbucket@gmail.com>\n  - @copyright Copyright (c) 2017\n  - @license   Fulcrumy\n-->\n<!-- Food Item Details Page -->\n\n<ion-header>\n  <ion-navbar color="orange">\n    <!-- <ion-buttons start>\n      <button ion-button color="default" clear (click)="dismiss()">\n        <ion-icon name="close" style="zoom:2.0;"></ion-icon>\n      </button>\n    </ion-buttons> -->\n    <ion-title>Details</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list text-center padding>\n    <img src="assets/imgs/food.jpg">\n    <!-- <h2>{{ item.title }}</h2> -->\n    <h2>Double Cheese Burger (Beef)</h2>\n    <!-- <ion-badge color="orange" item-center>${{ item.rate_count }}</ion-badge> -->\n    <ion-badge color="orange" item-center>2</ion-badge>\n    <!-- <p>{{ item.title }} </p> -->\n    <p>Double Cheese Burger (Beef)</p>\n    <ion-row>\n          <ion-col col-4>\n             \n                <ion-badge color="orange">Size:</ion-badge>\n              \n         </ion-col>\n         <ion-col col-2>\n          \n               \n              S  <ion-icon ios="ios-checkbox" md="md-checkbox"  color="orange"></ion-icon>\n           \n         </ion-col>\n         <ion-col col-2>\n           \n              \n              M  <ion-icon ios="ios-checkbox" md="md-checkbox"  color="orange"></ion-icon>\n           \n         </ion-col>\n         <ion-col col-2>\n          \n               \n              L  <ion-icon ios="ios-checkbox" md="md-checkbox"  color="orange"></ion-icon>\n\n         </ion-col>\n      </ion-row>\n    <ion-grid>\n      \n      <ion-row>\n        <ion-col col-2></ion-col>\n        <ion-col col-2>\n          <button ion-button round class=\'qtyminus\' color="orange">\n            <ion-icon name="remove"></ion-icon>\n         </button>\n        </ion-col>\n        <ion-col col-4>\n          <ion-input type=\'number\' name=\'quantity\' text-center value="1" class=\'qty\'></ion-input>\n        </ion-col>\n        <ion-col col-2>\n          <button ion-button round class=\'qtyminus\' color="orange">\n            <ion-icon name="add"></ion-icon>\n         </button>\n        </ion-col>\n        <ion-col col-2></ion-col>\n      </ion-row>\n      <ion-row>\n        <button ion-button full round color="orange">{{\'ITEM_DETAILS.BUTTON\' | translate}}</button>\n      </ion-row>\n    </ion-grid>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"D:\Project\Ionic\KissCoffee\src\pages\food-item-details\food-item-details.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */]])
+    ], FoodItemDetailsPage);
+    return FoodItemDetailsPage;
+}());
+
+//# sourceMappingURL=food-item-details.js.map
+
+/***/ }),
+
+/***/ 209:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(229);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 229:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export TranslateLoaderFactory */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_http_loader__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_admob_free__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_geolocation__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_admob_free_admob_free__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_service_service__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_food_item_details_food_item_details__ = __webpack_require__(207);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// By default TranslateLoader will look for translation json files in i18n/
+// So change this lool in the src/assets directory.
+function TranslateLoaderFactory(http) {
+    return new __WEBPACK_IMPORTED_MODULE_4__ngx_translate_http_loader__["a" /* TranslateHttpLoader */](http, 'assets/i18n/', '.json');
+}
+var AppModule = (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_food_item_details_food_item_details__["a" /* FoodItemDetailsPage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {
+                    menuType: 'overlay'
+                }, {
+                    links: [
+                        { loadChildren: '../pages/about-us/about-us.module#AboutUsPageModule', name: 'AboutUsPage', segment: 'about-us', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cart/cart.module#CartPageModule', name: 'CartPage', segment: 'cart', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/delivery-confirmation/delivery-confirmation.module#DeliveryConfirmationPageModule', name: 'DeliveryConfirmationPage', segment: 'delivery-confirmation', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/delivery-tracking/delivery-tracking.module#DeliveryTrackingPageModule', name: 'DeliveryTrackingPage', segment: 'delivery-tracking', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/food-categories/food-categories.module#FoodCategoriesPageModule', name: 'FoodCategoriesPage', segment: 'food-categories', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/first-landing/first-landing.module#FirstLandingPageModule', name: 'FirstLandingPage', segment: 'first-landing', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/food-category-items/food-category-items.module#FoodCategoryItemsPageModule', name: 'FoodCategoryItemsPage', segment: 'food-category-items', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/food-item-details/food-item-details.module#FoodItemDetailsPageModule', name: 'FoodItemDetailsPage', segment: 'food-item-details', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/payment/payment.module#PaymentPageModule', name: 'PaymentPage', segment: 'payment', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/second-landing/second-landing.module#SecondLandingPageModule', name: 'SecondLandingPage', segment: 'second-landing', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/user-information/user-information.module#UserInformationPageModule', name: 'UserInformationPage', segment: 'user-information', priority: 'low', defaultHistory: [] }
+                    ]
+                }),
+                __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forRoot({
+                    loader: {
+                        provide: __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["a" /* TranslateLoader */],
+                        useFactory: (TranslateLoaderFactory),
+                        deps: [__WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */]]
+                    }
+                }),
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_food_item_details_food_item_details__["a" /* FoodItemDetailsPage */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__["a" /* SplashScreen */],
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_7__ionic_native_admob_free__["a" /* AdMobFree */],
+                __WEBPACK_IMPORTED_MODULE_10__ionic_native_geolocation__["a" /* Geolocation */],
+                __WEBPACK_IMPORTED_MODULE_11__providers_admob_free_admob_free__["a" /* AdmobFreeProvider */],
+                __WEBPACK_IMPORTED_MODULE_12__providers_service_service__["a" /* ServiceProvider */]
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 291:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(54);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+// import { AdmobFreeProvider } from '../providers/admob-free/admob-free';
+var MyApp = (function () {
+    function MyApp(platform, statusBar, splashScreen, translateService, http) {
+        this.platform = platform;
+        this.statusBar = statusBar;
+        this.splashScreen = splashScreen;
+        this.translateService = translateService;
+        this.http = http;
+        this.rootPage = 'FirstLandingPage';
+        this.initializeApp();
+        // Default Language
+        translateService.setDefaultLang('en');
+    }
+    MyApp.prototype.initializeApp = function () {
+        var _this = this;
+        this.platform.ready().then(function () {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            _this.statusBar.styleDefault();
+            _this.splashScreen.hide();
+            _this.getSidebarList();
+            // Show Video Ad After 2 Minutes
+            setInterval(function () {
+                _this.prepareAdmobVideo();
+            }, 120000);
+            // Show Interstitial Ad After 1 Minutes
+            setInterval(function () {
+                _this.prepareInterstitial();
+            }, 60000);
+        });
+    };
+    /**
+     * --------------------------------------------------------------
+     * Get Sidebar List
+     * --------------------------------------------------------------
+     */
+    MyApp.prototype.getSidebarList = function () {
+        var _this = this;
+        this.http.get('assets/i18n/en.json').subscribe(function (data) {
+            _this.pages = data.SIDEBAR_List;
+        }, function (error) {
+            console.error(error);
+        });
+    };
+    MyApp.prototype.openPage = function (page) {
+        // Reset the content nav to have just this page
+        // we wouldn't want the back button to show in this scenario
+        this.nav.setRoot(page);
+    };
+    /**
+     * Prepare and show admob Video ad
+     */
+    MyApp.prototype.prepareAdmobVideo = function () {
+        // this.admobFree.prepareAdmobVideo();
+    };
+    /**
+     * Prepare and show admob Interstitial Ad
+     */
+    MyApp.prototype.prepareInterstitial = function () {
+        // this.admobFree.prepareInterstitial();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
+    ], MyApp.prototype, "nav", void 0);
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\Project\Ionic\KissCoffee\src\app\app.html"*/'<ion-menu [content]="content" *ngIf="this.platform.dir()===\'ltr\'" side="left">\n  <ion-header>\n    <ion-toolbar>\n      <img class="logo animated fadeInDown" src="assets/imgs/logo-icon.png">\n    </ion-toolbar>\n  </ion-header>\n  <!-- Side Menu Content Options -->\n  <ion-content>\n    <ion-list no-lines>\n      <ion-item menuClose *ngFor="let page of pages; let i = index" (click)="openPage(page.COMPONENT)">\n        <ion-icon ion-text color="ash" [name]="page.ICON" item-left></ion-icon>\n        <span ion-text color="ash">{{\'SIDEBAR_List.\' + i + \'.NAME\' | translate}}</span>\n      </ion-item>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-menu [content]="content" *ngIf="this.platform.dir()!==\'ltr\'" side="right">\n  <ion-header>\n    <ion-toolbar>\n      <img class="logo animated fadeInDown" src="assets/imgs/logo-icon.png">\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list no-lines>\n      <ion-item menuClose *ngFor="let page of pages; let i = index" (click)="openPage(page.COMPONENT)">\n        <ion-icon ion-text color="ash" [name]="page.ICON" item-left></ion-icon>\n        <span ion-text color="ash">{{\'SIDEBAR_List.\' + i + \'.NAME\' | translate}}</span>\n      </ion-item>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"D:\Project\Ionic\KissCoffee\src\app\app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */]])
+    ], MyApp);
+    return MyApp;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 292:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdmobFreeProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_free__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_config_admob__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_free__ = __webpack_require__(205);
 /**
  * @author    Ionic Bucket <ionicbucket@gmail.com>
  * @copyright Copyright (c) 2018
@@ -120,10 +522,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
+// import { AdmobConfig } from '../../assets/config/admob';
 var AdmobFreeProvider = (function () {
     function AdmobFreeProvider(platform, admobFree) {
-        var _this = this;
         this.platform = platform;
         this.admobFree = admobFree;
         this.bannerPrepared = false;
@@ -164,23 +565,23 @@ var AdmobFreeProvider = (function () {
         this.platform.ready().then(function () {
             // For Android
             if (platform.is('android')) {
-                _this.admobId = {
-                    banner: __WEBPACK_IMPORTED_MODULE_3__assets_config_admob__["a" /* AdmobConfig */].androidBanner,
-                    interstitial: __WEBPACK_IMPORTED_MODULE_3__assets_config_admob__["a" /* AdmobConfig */].androidInterstitial,
-                    video: __WEBPACK_IMPORTED_MODULE_3__assets_config_admob__["a" /* AdmobConfig */].androidVideo
-                };
-                _this.bannerSizeOpts = _this.bannerSizes[0]['android'];
+                // this.admobId = {
+                //   banner: AdmobConfig.androidBanner,
+                //   interstitial: AdmobConfig.androidInterstitial,
+                //   video: AdmobConfig.androidVideo
+                // };
+                // this.bannerSizeOpts = this.bannerSizes[0]['android'];
             }
             // For iOS
             if (platform.is('ios')) {
-                _this.admobId = {
-                    banner: __WEBPACK_IMPORTED_MODULE_3__assets_config_admob__["a" /* AdmobConfig */].iosBanner,
-                    interstitial: __WEBPACK_IMPORTED_MODULE_3__assets_config_admob__["a" /* AdmobConfig */].iosInterstitial,
-                    video: __WEBPACK_IMPORTED_MODULE_3__assets_config_admob__["a" /* AdmobConfig */].iosVideo
-                };
-                _this.bannerSizeOpts = _this.bannerSizes[1]['ios'];
+                // this.admobId = {
+                //   banner: AdmobConfig.iosBanner,
+                //   interstitial: AdmobConfig.iosInterstitial,
+                //   video: AdmobConfig.iosVideo
+                // };
+                // this.bannerSizeOpts = this.bannerSizes[1]['ios'];
             }
-            _this.init();
+            // this.init();
         });
     }
     /**
@@ -279,253 +680,7 @@ var AdmobFreeProvider = (function () {
 
 //# sourceMappingURL=admob-free.js.map
 
-/***/ }),
-
-/***/ 208:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(228);
-
-
-Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
-
-/***/ }),
-
-/***/ 228:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export TranslateLoaderFactory */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_http_loader__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(289);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_admob_free__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_geolocation__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_admob_free_admob_free__ = __webpack_require__(205);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-// By default TranslateLoader will look for translation json files in i18n/
-// So change this lool in the src/assets directory.
-function TranslateLoaderFactory(http) {
-    return new __WEBPACK_IMPORTED_MODULE_4__ngx_translate_http_loader__["a" /* TranslateHttpLoader */](http, 'assets/i18n/', '.json');
-}
-var AppModule = (function () {
-    function AppModule() {
-    }
-    AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {
-                    menuType: 'overlay'
-                }, {
-                    links: [
-                        { loadChildren: '../pages/about-us/about-us.module#AboutUsPageModule', name: 'AboutUsPage', segment: 'about-us', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cart/cart.module#CartPageModule', name: 'CartPage', segment: 'cart', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/delivery-confirmation/delivery-confirmation.module#DeliveryConfirmationPageModule', name: 'DeliveryConfirmationPage', segment: 'delivery-confirmation', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/delivery-tracking/delivery-tracking.module#DeliveryTrackingPageModule', name: 'DeliveryTrackingPage', segment: 'delivery-tracking', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/first-landing/first-landing.module#FirstLandingPageModule', name: 'FirstLandingPage', segment: 'first-landing', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/food-categories/food-categories.module#FoodCategoriesPageModule', name: 'FoodCategoriesPage', segment: 'food-categories', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/food-category-items/food-category-items.module#FoodCategoryItemsPageModule', name: 'FoodCategoryItemsPage', segment: 'food-category-items', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/food-item-details/food-item-details.module#FoodItemDetailsPageModule', name: 'FoodItemDetailsPage', segment: 'food-item-details', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/payment/payment.module#PaymentPageModule', name: 'PaymentPage', segment: 'payment', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/second-landing/second-landing.module#SecondLandingPageModule', name: 'SecondLandingPage', segment: 'second-landing', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/user-information/user-information.module#UserInformationPageModule', name: 'UserInformationPage', segment: 'user-information', priority: 'low', defaultHistory: [] }
-                    ]
-                }),
-                __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forRoot({
-                    loader: {
-                        provide: __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["a" /* TranslateLoader */],
-                        useFactory: (TranslateLoaderFactory),
-                        deps: [__WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */]]
-                    }
-                }),
-            ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
-            entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */]
-            ],
-            providers: [
-                __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_7__ionic_native_admob_free__["a" /* AdMobFree */],
-                __WEBPACK_IMPORTED_MODULE_10__ionic_native_geolocation__["a" /* Geolocation */],
-                __WEBPACK_IMPORTED_MODULE_11__providers_admob_free_admob_free__["a" /* AdmobFreeProvider */]
-            ]
-        })
-    ], AppModule);
-    return AppModule;
-}());
-
-//# sourceMappingURL=app.module.js.map
-
-/***/ }),
-
-/***/ 289:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_admob_free_admob_free__ = __webpack_require__(205);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var MyApp = (function () {
-    function MyApp(platform, statusBar, splashScreen, translateService, http, admobFree) {
-        this.platform = platform;
-        this.statusBar = statusBar;
-        this.splashScreen = splashScreen;
-        this.translateService = translateService;
-        this.http = http;
-        this.admobFree = admobFree;
-        this.rootPage = 'FirstLandingPage';
-        this.initializeApp();
-        // Default Language
-        translateService.setDefaultLang('en');
-    }
-    MyApp.prototype.initializeApp = function () {
-        var _this = this;
-        this.platform.ready().then(function () {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
-            _this.statusBar.styleDefault();
-            _this.splashScreen.hide();
-            _this.getSidebarList();
-            // Show Video Ad After 2 Minutes
-            setInterval(function () {
-                _this.prepareAdmobVideo();
-            }, 120000);
-            // Show Interstitial Ad After 1 Minutes
-            setInterval(function () {
-                _this.prepareInterstitial();
-            }, 60000);
-        });
-    };
-    /**
-     * --------------------------------------------------------------
-     * Get Sidebar List
-     * --------------------------------------------------------------
-     */
-    MyApp.prototype.getSidebarList = function () {
-        var _this = this;
-        this.http.get('assets/i18n/en.json').subscribe(function (data) {
-            _this.pages = data.SIDEBAR_List;
-        }, function (error) {
-            console.error(error);
-        });
-    };
-    MyApp.prototype.openPage = function (page) {
-        // Reset the content nav to have just this page
-        // we wouldn't want the back button to show in this scenario
-        this.nav.setRoot(page);
-    };
-    /**
-     * Prepare and show admob Video ad
-     */
-    MyApp.prototype.prepareAdmobVideo = function () {
-        this.admobFree.prepareAdmobVideo();
-    };
-    /**
-     * Prepare and show admob Interstitial Ad
-     */
-    MyApp.prototype.prepareInterstitial = function () {
-        this.admobFree.prepareInterstitial();
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
-    ], MyApp.prototype, "nav", void 0);
-    MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\Project\Ionic\KissCoffee\src\app\app.html"*/'<ion-menu [content]="content" *ngIf="this.platform.dir()===\'ltr\'" side="left">\n  <ion-header>\n    <ion-toolbar>\n      <img class="logo animated fadeInDown" src="assets/imgs/logo-icon.png">\n    </ion-toolbar>\n  </ion-header>\n  <!-- Side Menu Content Options -->\n  <ion-content>\n    <ion-list no-lines>\n      <ion-item menuClose *ngFor="let page of pages; let i = index" (click)="openPage(page.COMPONENT)">\n        <ion-icon ion-text color="ash" [name]="page.ICON" item-left></ion-icon>\n        <span ion-text color="ash">{{\'SIDEBAR_List.\' + i + \'.NAME\' | translate}}</span>\n      </ion-item>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-menu [content]="content" *ngIf="this.platform.dir()!==\'ltr\'" side="right">\n  <ion-header>\n    <ion-toolbar>\n      <img class="logo animated fadeInDown" src="assets/imgs/logo-icon.png">\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list no-lines>\n      <ion-item menuClose *ngFor="let page of pages; let i = index" (click)="openPage(page.COMPONENT)">\n        <ion-icon ion-text color="ash" [name]="page.ICON" item-left></ion-icon>\n        <span ion-text color="ash">{{\'SIDEBAR_List.\' + i + \'.NAME\' | translate}}</span>\n      </ion-item>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"D:\Project\Ionic\KissCoffee\src\app\app.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_6__providers_admob_free_admob_free__["a" /* AdmobFreeProvider */]])
-    ], MyApp);
-    return MyApp;
-}());
-
-//# sourceMappingURL=app.component.js.map
-
-/***/ }),
-
-/***/ 290:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdmobConfig; });
-/**
- * @author    Ionic Bucket <ionicbucket@gmail.com>
- * @copyright Copyright (c) 2018
- * @license   Fulcrumy
- *
- * This file represents admob configuration.
- * File path - '../src/assets/config/admob'
- */
-var AdmobConfig = {
-    "androidBanner": "ca-app-pub-6408755120961153/4003028692",
-    "androidInterstitial": "ca-app-pub-6408755120961153/1321025031",
-    "androidVideo": "ca-app-pub-6408755120961153/3339440447",
-    "iosBanner": "ca-app-pub-6408755120961153/3182160799",
-    "iosInterstitial": "ca-app-pub-6408755120961153/2377588851",
-    "iosVideo": "ca-app-pub-6408755120961153/9047950740"
-};
-//# sourceMappingURL=admob.js.map
-
 /***/ })
 
-},[208]);
+},[209]);
 //# sourceMappingURL=main.js.map

@@ -17,8 +17,12 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class FoodItemDetailsPage {
 
+  item = this.navParams.data;
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private viewCtrl: ViewController) {
+    
+      console.log(this.item);
   }
 
   /**

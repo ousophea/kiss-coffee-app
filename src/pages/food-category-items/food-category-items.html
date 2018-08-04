@@ -24,32 +24,57 @@
   </div>
 
   <ion-list padding>
-    <ion-item class="animated bounceInLeft" text-wrap *ngFor="let item of foodItems; let i = index">
-
-      <ion-thumbnail item-start (click)="gotoItemDetails()">
-        <img src="assets/imgs/{{categoryName}}.png">
+    <!-- <ion-item class="animated bounceInLeft" text-wrap *ngFor="let item of foodItems; let i = index"> -->
+    <ion-item class="animated bounceInLeft">
+    
+      <ion-thumbnail item-start (click)="gotoItemDetails(item=null)">
+        <img src="assets/imgs/BURGER.png">
       </ion-thumbnail>
 
-      <h2 (click)="gotoItemDetails()">{{'FOOD_ITEMS.'+ categoryName + '.' + i + '.NAME' | translate}}</h2>
-      <p (click)="gotoItemDetails()">{{'FOOD_ITEMS.'+ categoryName + '.' + i + '.DESCRIPTION' | translate}}</p>
-      <ion-badge item-end color="orange">{{'FOOD_ITEMS.'+ categoryName + '.' + i + '.PRICE' | translate}}</ion-badge>
+      <!-- <h2 (click)="gotoItemDetails(item)">{{item.title }}</h2>
+      <p (click)="gotoItemDetails(item)">{{ item.title }}</p>
+      <ion-badge item-end color="orange">{{ item.rate_count }}</ion-badge> -->
+      <h2 (click)="gotoItemDetails(item)">Double Cheese Burger (Beef)</h2>
+      <p (click)="gotoItemDetails(item)">Double Cheese Burger (Beef)</p>
+      <ion-badge item-end color="orange">10$</ion-badge>
+      
+     
 
       <ion-grid>
         <ion-row>
+          
           <ion-col col-2>
-            <button ion-button clear item-end color="orange" [disabled]="!foodItems[i].quantity" (click)="minusQuantity(item, i)">
+            <button ion-button clear item-end color="orange" [disabled]="1" (click)="minusQuantity(item, i)">
               <ion-icon name="remove" style="zoom:1.8;"></ion-icon>
             </button>
           </ion-col>
           <ion-col col-2 padding-top text-center>
-            <span>{{foodItems[i].quantity}}</span>
+            <span>1</span>
           </ion-col>
           <ion-col col-2>
             <button ion-button clear item-end color="orange" (click)="addQuantity(item, i)">
               <ion-icon name="add" style="zoom:1.8;"></ion-icon>
             </button>
-          </ion-col>
+          </ion-col>       
         </ion-row>
+       
+      </ion-grid>
+      <ion-grid>
+          <ion-row>
+              <!-- <ion-col col-4></ion-col> -->
+              <ion-col col-2>
+                  <ion-icon ios="ios-heart" md="md-heart"  color="orange"></ion-icon>
+              </ion-col>
+              <ion-col col-2></ion-col>
+              <ion-col col-4>
+                  <ion-badge color="blue">10k</ion-badge>
+              </ion-col>
+              <ion-col col-2></ion-col>
+              <ion-col col-2>
+                  <ion-icon name="cart"  color="orange"></ion-icon>
+              </ion-col>
+              <!-- <ion-col col-4></ion-col> -->
+         </ion-row> 
       </ion-grid>
     </ion-item>
   </ion-list>

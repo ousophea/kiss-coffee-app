@@ -10,6 +10,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Geolocation } from '@ionic-native/geolocation';
 import { AdmobFreeProvider } from '../providers/admob-free/admob-free';
+import { ServiceProvider } from '../providers/service/service';
+import { FoodItemDetailsPage } from '../pages/food-item-details/food-item-details';
 
 // By default TranslateLoader will look for translation json files in i18n/
 // So change this lool in the src/assets directory.
@@ -19,7 +21,8 @@ export function TranslateLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+    FoodItemDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ export function TranslateLoaderFactory(http: HttpClient) {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
+    MyApp,
+    FoodItemDetailsPage
   ],
   providers: [
     StatusBar,
@@ -45,7 +49,8 @@ export function TranslateLoaderFactory(http: HttpClient) {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AdMobFree,
     Geolocation,
-    AdmobFreeProvider
+    AdmobFreeProvider,
+    ServiceProvider
   ]
 })
 export class AppModule { }

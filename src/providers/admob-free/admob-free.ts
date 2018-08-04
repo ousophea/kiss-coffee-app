@@ -11,7 +11,7 @@
 import { Injectable } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { AdMobFree, AdMobFreeBannerConfig, AdMobFreeInterstitialConfig, AdMobFreeRewardVideoConfig } from '@ionic-native/admob-free';
-import { AdmobConfig } from '../../assets/config/admob';
+// import { AdmobConfig } from '../../assets/config/admob';
 
 @Injectable()
 export class AdmobFreeProvider {
@@ -64,24 +64,24 @@ export class AdmobFreeProvider {
     this.platform.ready().then(() => {
       // For Android
       if (platform.is('android')) {
-        this.admobId = {
-          banner: AdmobConfig.androidBanner,
-          interstitial: AdmobConfig.androidInterstitial,
-          video: AdmobConfig.androidVideo
-        };
-        this.bannerSizeOpts = this.bannerSizes[0]['android'];
+        // this.admobId = {
+        //   banner: AdmobConfig.androidBanner,
+        //   interstitial: AdmobConfig.androidInterstitial,
+        //   video: AdmobConfig.androidVideo
+        // };
+        // this.bannerSizeOpts = this.bannerSizes[0]['android'];
       }
 
       // For iOS
       if (platform.is('ios')) {
-        this.admobId = {
-          banner: AdmobConfig.iosBanner,
-          interstitial: AdmobConfig.iosInterstitial,
-          video: AdmobConfig.iosVideo
-        };
-        this.bannerSizeOpts = this.bannerSizes[1]['ios'];
+        // this.admobId = {
+        //   banner: AdmobConfig.iosBanner,
+        //   interstitial: AdmobConfig.iosInterstitial,
+        //   video: AdmobConfig.iosVideo
+        // };
+        // this.bannerSizeOpts = this.bannerSizes[1]['ios'];
       }
-      this.init();
+      // this.init();
     });
   }
 
@@ -175,4 +175,5 @@ export class AdmobFreeProvider {
         console.error(err);
       })
   }
+
 }

@@ -1,15 +1,15 @@
 webpackJsonp([11],{
 
-/***/ 292:
+/***/ 293:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CartPageModule", function() { return CartPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutUsPageModule", function() { return AboutUsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cart__ = __webpack_require__(305);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_us__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,41 +20,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CartPageModule = (function () {
-    function CartPageModule() {
+var AboutUsPageModule = (function () {
+    function AboutUsPageModule() {
     }
-    CartPageModule = __decorate([
+    AboutUsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__cart__["a" /* CartPage */],
+                __WEBPACK_IMPORTED_MODULE_2__about_us__["a" /* AboutUsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cart__["a" /* CartPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__about_us__["a" /* AboutUsPage */]),
             ],
         })
-    ], CartPageModule);
-    return CartPageModule;
+    ], AboutUsPageModule);
+    return AboutUsPageModule;
 }());
 
-//# sourceMappingURL=cart.module.js.map
+//# sourceMappingURL=about-us.module.js.map
 
 /***/ }),
 
-/***/ 305:
+/***/ 306:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CartPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutUsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
 /**
  * @author    Ionic Bucket <ionicbucket@gmail.com>
  * @copyright Copyright (c) 2017
  * @license   Fulcrumy
  *
- * This file represents a component of Cart page
- * File path - '../../../../src/pages/cart/cart'
+ * This file represents a component of About Us page
+ * File path - '../../../../src/pages/about-us/about-us'
  */
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -67,28 +66,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var CartPage = (function () {
-    function CartPage(navCtrl, navParams, menu) {
+var AboutUsPage = (function () {
+    function AboutUsPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.menu = menu;
-        this.menu.enable(true);
     }
-    CartPage.prototype.gotoDeliveryConfirmPage = function () {
-        this.navCtrl.setRoot('DeliveryConfirmationPage');
+    AboutUsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AboutUsPage');
     };
-    CartPage = __decorate([
+    AboutUsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cart',template:/*ion-inline-start:"D:\Project\Ionic\KissCoffee\src\pages\cart\cart.html"*/'<!-- \n  - @author    Ionic Bucket <ionicbucket@gmail.com>\n  - @copyright Copyright (c) 2017\n  - @license   Fulcrumy\n-->\n<!-- Cart Page -->\n\n<ion-header no-border>\n	<ion-navbar color="orange" hideBackButton>\n		<button ion-button menuToggle>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n		<ion-title>{{\'CART.TITLE\' | translate}}</ion-title>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-list padding>\n		<ion-item class="animated bounceInLeft" text-wrap>\n			<ion-thumbnail item-start>\n				<img src="assets/imgs/BURGER.png">\n			</ion-thumbnail>\n			<h2>{{\'FOOD_ITEMS.BURGER\'+ \'.\' + 0 + \'.NAME\' | translate}}</h2>\n\n			<button ion-button clear item-end color="orange">\n                <ion-icon name="close" style="zoom:1.8;"></ion-icon>\n            </button>\n			<ion-grid>\n				<ion-row>\n					<ion-col col-2>\n						<button ion-button clear item-end color="orange">\n                            <ion-icon name="remove" style="zoom:1.8;"></ion-icon>\n                        </button>\n					</ion-col>\n					<ion-col col-2 padding-top text-center>\n						<span>4</span>\n					</ion-col>\n					<ion-col col-2>\n						<button ion-button clear item-end color="orange">\n                            <ion-icon name="add" style="zoom:1.8;"></ion-icon>\n                        </button>\n					</ion-col>\n					<ion-col col-6 text-right>\n						<ion-badge item-end color="orange">{{\'FOOD_ITEMS.BURGER\' + \'.\' + 0 + \'.PRICE\' | translate}}</ion-badge>\n					</ion-col>\n				</ion-row>\n			</ion-grid>\n		</ion-item>\n		<ion-item class="animated bounceInLeft" text-wrap>\n			<ion-thumbnail item-start>\n				<img src="assets/imgs/CHINESS.png">\n			</ion-thumbnail>\n			<h2>{{\'FOOD_ITEMS.CHINESS\' + \'.\' + 0 + \'.NAME\' | translate}}</h2>\n\n			<button ion-button clear item-end color="orange">\n                <ion-icon name="close" style="zoom:1.8;"></ion-icon>\n            </button>\n			<ion-grid>\n				<ion-row>\n					<ion-col col-2>\n						<button ion-button clear item-end color="orange">\n                            <ion-icon name="remove" style="zoom:1.8;"></ion-icon>\n                        </button>\n					</ion-col>\n					<ion-col col-2 padding-top text-center>\n						<span>1</span>\n					</ion-col>\n					<ion-col col-2>\n						<button ion-button clear item-end color="orange">\n                            <ion-icon name="add" style="zoom:1.8;"></ion-icon>\n                        </button>\n					</ion-col>\n					<ion-col col-6 text-right>\n						<ion-badge item-end color="orange">{{\'FOOD_ITEMS.CHINESS\' + \'.\' + 0 + \'.PRICE\' | translate}}</ion-badge>\n					</ion-col>\n				</ion-row>\n			</ion-grid>\n		</ion-item>\n		<ion-item class="animated bounceInLeft" text-wrap>\n			<ion-thumbnail item-start>\n				<img src="assets/imgs/SALADS.png">\n			</ion-thumbnail>\n			<h2>{{\'FOOD_ITEMS.SALADS\' + \'.\' + 0 + \'.NAME\' | translate}}</h2>\n\n			<button ion-button clear item-end color="orange">\n                <ion-icon name="close" style="zoom:1.8;"></ion-icon>\n            </button>\n			<ion-grid>\n				<ion-row>\n					<ion-col col-2>\n						<button ion-button clear item-end color="orange">\n                            <ion-icon name="remove" style="zoom:1.8;"></ion-icon>\n                        </button>\n					</ion-col>\n					<ion-col col-2 padding-top text-center>\n						<span>2</span>\n					</ion-col>\n					<ion-col col-2>\n						<button ion-button clear item-end color="orange">\n                            <ion-icon name="add" style="zoom:1.8;"></ion-icon>\n                        </button>\n					</ion-col>\n					<ion-col col-6 text-right>\n						<ion-badge item-end color="orange">{{\'FOOD_ITEMS.SALADS\' + \'.\' + 0 + \'.PRICE\' | translate}}</ion-badge>\n					</ion-col>\n				</ion-row>\n			</ion-grid>\n		</ion-item>\n	</ion-list>\n	<ion-card padding>\n		<ion-grid>\n			<ion-row>\n				<ion-col col-2>\n				</ion-col>\n				<ion-col col-4>\n					<p class="total">Total</p>\n				</ion-col>\n				<ion-col col-4 text-right>\n					<p class="total-price">$700</p>\n				</ion-col>\n				<ion-col col-2>\n				</ion-col>\n			</ion-row>\n		</ion-grid>\n	</ion-card>\n\n	<div text-center>\n		<button ion-button color="orange" round (click)="gotoDeliveryConfirmPage()">{{\'CART.BUTTON\' | translate}}</button>\n	</div>\n</ion-content>'/*ion-inline-end:"D:\Project\Ionic\KissCoffee\src\pages\cart\cart.html"*/,
+            selector: 'page-about-us',template:/*ion-inline-start:"D:\Project\Ionic\KissCoffee\src\pages\about-us\about-us.html"*/'<!-- \n  - @author    Ionic Bucket <ionicbucket@gmail.com>\n  - @copyright Copyright (c) 2017\n  - @license   Fulcrumy\n-->\n<!-- About Us Page -->\n\n<ion-header no-border>\n  <ion-navbar color="orange" hideBackButton>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{\'ABOUTUS.TITLE\' | translate}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div class="background">\n    <div class="page-title">\n      <h1>ABOUT US</h1>\n      <p>Lorem Ipsum is simply dummy text!</p>\n    </div>\n  </div>\n  <div padding class="contents">\n    <strong>What is IonicBucket?</strong>\n    <br>\n    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard\n      dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen\n      book.\n    </p>\n    <br>\n    <strong>IonicBucket Online Experience</strong>\n    <br>\n    <p>\n      There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by\n      injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of\n      Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum\n      generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the\n      Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate\n      Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour,\n      or non-characteristic words etc.\n    </p>\n  </div>\n</ion-content>'/*ion-inline-end:"D:\Project\Ionic\KissCoffee\src\pages\about-us\about-us.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* MenuController */]])
-    ], CartPage);
-    return CartPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    ], AboutUsPage);
+    return AboutUsPage;
 }());
 
-//# sourceMappingURL=cart.js.map
+//# sourceMappingURL=about-us.js.map
 
 /***/ })
 

@@ -10,6 +10,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController, ModalController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import { ServiceProvider } from '../../providers/service/service';
+import { FoodItemDetailsPage } from '../food-item-details/food-item-details';
 
 @IonicPage()
 @Component({
@@ -24,7 +26,8 @@ export class FoodCategoryItemsPage {
     public navParams: NavParams,
     private viewCtrl: ViewController,
     private http: HttpClient,
-    public modalCtrl: ModalController) {
+    public modalCtrl: ModalController,
+    public serviceProvider: ServiceProvider) {
 
   }
 
@@ -57,8 +60,9 @@ export class FoodCategoryItemsPage {
    * --------------------------------------------------------------
    */
   getFoodItems() {
-    this.http.get('assets/i18n/en.json').subscribe((data: any) => {
-      this.foodItems = data.FOOD_ITEMS[this.categoryName];
+    this.http.get(this.serviceProvider.BASH_URL + 'foods').subscribe((data: any) => {
+      // this.foodItems = data.FOOD_ITEMS[this.categoryName];
+      this.foodItems = data;
     }, error => {
       console.error('Error: ' + error);
     });
@@ -86,8 +90,8 @@ export class FoodCategoryItemsPage {
    * GoTO Item Details Page
    * --------------------------------------------------------------
    */
-  gotoItemDetails() {
-    this.navCtrl.setRoot('FoodItemDetailsPage');
+  gotoItemDetails(item) {
+    this.navCtrl.push(FoodItemDetailsPage, item);
   }
   /**
    * Dismiss function

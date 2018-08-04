@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
-import { AdmobFreeProvider } from '../providers/admob-free/admob-free';
+// import { AdmobFreeProvider } from '../providers/admob-free/admob-free';
 
 @Component({
   templateUrl: 'app.html'
@@ -18,7 +18,9 @@ export class MyApp {
 
   constructor(public platform: Platform, public statusBar: StatusBar,
     public splashScreen: SplashScreen, public translateService: TranslateService,
-    public http: HttpClient, private admobFree: AdmobFreeProvider) {
+    public http: HttpClient, 
+    // private admobFree: AdmobFreeProvider
+    ) {
     this.initializeApp();
 
     // Default Language
@@ -68,13 +70,13 @@ export class MyApp {
    * Prepare and show admob Video ad
    */
   prepareAdmobVideo() {
-    this.admobFree.prepareAdmobVideo();
+    // this.admobFree.prepareAdmobVideo();
   }
 
   /**
    * Prepare and show admob Interstitial Ad
    */
   prepareInterstitial() {
-    this.admobFree.prepareInterstitial();
+    // this.admobFree.prepareInterstitial();
   }
 }

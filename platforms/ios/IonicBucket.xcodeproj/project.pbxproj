@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+/* Begin PBXBuildFile section */
+		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
+		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
+		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
+		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
+		3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A50F1AB8059700498E2A /* build-debug.xcconfig */; };
+		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
+		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
+		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
+		213EF784E19A48ED93A5735A /* CDVAdMob.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF9FA937B8F4301BCD3265B /* CDVAdMob.m */; };
+		DE6D738580D24A51AC3F34A2 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E7350C1334E0FBEB9FE0E /* CDVDevice.m */; };
+		69D4099EBDB54E69B59A1AD9 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 816228E5C93D423B8025F4BA /* CDVLocation.m */; };
+		A18578EDF62D422BAB72A6EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F45E550DCA40A09A1CE0EA /* CoreLocation.framework */; };
+		686E7F495DC34706BF8B40F5 /* CDVWKWebViewEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F76DC85519644BE5BD5284AA /* CDVWKWebViewEngine.m */; };
+		9E211E7C785449AFA4E6E3C9 /* CDVWKWebViewUIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE80523498C4F358F92FCA1 /* CDVWKWebViewUIDelegate.m */; };
+		A1C16C7DBD484FC0B3DC3BA1 /* CDVWKProcessPoolFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1375DE1AD4B9487784411C71 /* CDVWKProcessPoolFactory.m */; };
+		1A97956782FF4BB3938234D8 /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6551D6DD6ECE426896D44C99 /* GCDWebServer.m */; };
+		1539221391D04239BFAAF227 /* GCDWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A055516B40D0B0E08964 /* GCDWebServerConnection.m */; };
+		B4C5D81C86A64831B0AB3E45 /* GCDWebServerFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A1CBE2827C4E19B724F7B5 /* GCDWebServerFunctions.m */; };
+		80172FE2B810451FAF1B7C06 /* GCDWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A730E2703A584BAB8FF8ACE2 /* GCDWebServerRequest.m */; };
+		475F930DD26F4840A237B4FD /* GCDWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D86414AD01184D15A892420E /* GCDWebServerResponse.m */; };
+		401628DCA41446E7BBA0332B /* GCDWebServerDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7BD779758C4A0B9C4E1C9C /* GCDWebServerDataRequest.m */; };
+		325B38689B154E5A9D4A48A3 /* GCDWebServerFileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24AAF9F01E41219E5061EE /* GCDWebServerFileRequest.m */; };
+		24279D7CC56949DFB9FB0831 /* GCDWebServerMultiPartFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB96996CDF6457CADAAB584 /* GCDWebServerMultiPartFormRequest.m */; };
+		A6AC9A3E4F6C4394885FCEF3 /* GCDWebServerURLEncodedFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 827490507613422BA95151A7 /* GCDWebServerURLEncodedFormRequest.m */; };
+		B75D99A8056D4FACB820D676 /* GCDWebServerDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9305BD1C5DF0490B97B2648F /* GCDWebServerDataResponse.m */; };
+		CF51177C86E74406AB6085F2 /* GCDWebServerErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 981EEF5E3429496FAA2292E3 /* GCDWebServerErrorResponse.m */; };
+		706F0FBCECB54B9C89C55139 /* GCDWebServerFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AABB275EC4474E71A23CAA7D /* GCDWebServerFileResponse.m */; };
+		30ED5CBEE0F243C8B70A9175 /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BB47997D4A934111BF90A5AD /* GCDWebServerStreamedResponse.m */; };
+		703F7D7C90374709AB249BB5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B04F883261431A8ECC9A07 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A196C48EF7A3401A997A04A8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FACA93485B84B9F9DB47DCD /* libz.tbd */; };
+		2CD987105FF24F639A1E1558 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6645EE8BC64C15ACD0B41B /* CDVSplashScreen.m */; };
+		F72C0C4FB29D48B3A12ECD74 /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 490EB8E4BD054450AAD0B684 /* CDVViewController+SplashScreen.m */; };
+		20AF524F79E4419F93D07758 /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AA74A656B74828AA3F43AF /* IonicKeyboard.m */; };
+		6BDCA4AFA20A45A99E52C2B1 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0565D1491AEB4291B7893081 /* GoogleMobileAds.framework */; };
+		F9BBF94CA9844D379421F769 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62593A543703429682103ADF /* AdSupport.framework */; };
+		F044BFEE5BA1422D87CDA6E2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5A8E2BDA874F479959A4A9 /* AudioToolbox.framework */; };
+		AD744A4E951A49F2AC3EA18F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631FF31355B2439C8E3D35B4 /* AVFoundation.framework */; };
+		35708C5984624EB8BE9A3F02 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235DE0EA8C44BD58ACEB81F /* CoreBluetooth.framework */; };
+		446360DC44E34531AF85A5FC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF0894DA1584064BFB86A56 /* CoreMedia.framework */; };
+		02CAE5995CFD4041AA244802 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C79EFF01F844D5BD0D6160 /* CoreMotion.framework */; };
+		972B422CBB30496986537953 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB23F6AB7D06409195473ED7 /* CoreTelephony.framework */; };
+		7641B86EC475460E848BB4A0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F948B522DBE7465AA8640248 /* CoreVideo.framework */; };
+		63731A7D20E14A7B970E14E7 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489965384ADA466BAE3230CD /* EventKit.framework */; };
+		258B5B129B574DE38B42B716 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6248DD52A4102BE9A948A /* EventKitUI.framework */; };
+		18612EBCA34544FEBA5C9799 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38099A50732347CF8C9B0A8B /* Foundation.framework */; };
+		CDBA318938D04119B6524F32 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DF911C1BE9483996261C33 /* GLKit.framework */; };
+		7ED3D27414704927914A3E1C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C278CDB513F45FB8CA6483D /* MediaPlayer.framework */; };
+		722891BDF4AB4320947C20C3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6D4DA52FF44EDAA2EBE37E /* MessageUI.framework */; };
+		A7AA4EA663C04851A3CEF6AB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886BF7D73350409BB42900E2 /* OpenGLES.framework */; };
+		6F71BFC4C5BF4F13A6A93E7A /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B4B94BF01A4BADA8A3515C /* SafariServices.framework */; };
+		D960407DE5F94649B3EDF976 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818CA394800647F2BF0FFE1C /* StoreKit.framework */; };
+		3E8F8FAAB539425DAA4EBBCB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FA0146CC7B489194B98AD4 /* SystemConfiguration.framework */; };
+		50460DC7BFAE4C9F861719A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8651E9BCB04F0B9EF0A10D /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		301BF534109A57CC0062928A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = CordovaLib;
+		};
+		301BF550109A68C00062928A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = CordovaLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "IonicBucket/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* IonicBucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IonicBucket.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
+		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
+		302D95EE14D2391D003F00A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		302D95EF14D2391D003F00A1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		302D95F014D2391D003F00A1 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		3047A50F1AB8059700498E2A /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-debug.xcconfig"; path = cordova/build-debug.xcconfig; sourceTree = SOURCE_ROOT; };
+		3047A5101AB8059700498E2A /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-release.xcconfig"; path = cordova/build-release.xcconfig; sourceTree = SOURCE_ROOT; };
+		3047A5111AB8059700498E2A /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = cordova/build.xcconfig; sourceTree = SOURCE_ROOT; };
+		32CA4F630368D1EE00C91783 /* IonicBucket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IonicBucket-Prefix.pch"; sourceTree = "<group>"; };
+		6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CDVLaunchScreen.storyboard; path = "IonicBucket/CDVLaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* IonicBucket-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "IonicBucket-Info.plist"; path = "IonicBucket/IonicBucket-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
+		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
+		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
+		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "IonicBucket/config.xml"; sourceTree = "<group>"; };
+		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		3DF9FA937B8F4301BCD3265B /* CDVAdMob.m */ = {isa = PBXFileReference; name = "CDVAdMob.m"; path = "cordova-plugin-admob-free/CDVAdMob.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		6D93E0E8F366425E93269AA4 /* CDVAdMob.h */ = {isa = PBXFileReference; name = "CDVAdMob.h"; path = "cordova-plugin-admob-free/CDVAdMob.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		5A3E7350C1334E0FBEB9FE0E /* CDVDevice.m */ = {isa = PBXFileReference; name = "CDVDevice.m"; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		412B988DB4B44F7189E0B1CE /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		816228E5C93D423B8025F4BA /* CDVLocation.m */ = {isa = PBXFileReference; name = "CDVLocation.m"; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		A1EDAE303E88479A879DE6DB /* CDVLocation.h */ = {isa = PBXFileReference; name = "CDVLocation.h"; path = "cordova-plugin-geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F6F45E550DCA40A09A1CE0EA /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		F76DC85519644BE5BD5284AA /* CDVWKWebViewEngine.m */ = {isa = PBXFileReference; name = "CDVWKWebViewEngine.m"; path = "cordova-plugin-ionic-webview/CDVWKWebViewEngine.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		4EE80523498C4F358F92FCA1 /* CDVWKWebViewUIDelegate.m */ = {isa = PBXFileReference; name = "CDVWKWebViewUIDelegate.m"; path = "cordova-plugin-ionic-webview/CDVWKWebViewUIDelegate.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		1375DE1AD4B9487784411C71 /* CDVWKProcessPoolFactory.m */ = {isa = PBXFileReference; name = "CDVWKProcessPoolFactory.m"; path = "cordova-plugin-ionic-webview/CDVWKProcessPoolFactory.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		6551D6DD6ECE426896D44C99 /* GCDWebServer.m */ = {isa = PBXFileReference; name = "GCDWebServer.m"; path = "cordova-plugin-ionic-webview/GCDWebServer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		18E6A055516B40D0B0E08964 /* GCDWebServerConnection.m */ = {isa = PBXFileReference; name = "GCDWebServerConnection.m"; path = "cordova-plugin-ionic-webview/GCDWebServerConnection.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		33A1CBE2827C4E19B724F7B5 /* GCDWebServerFunctions.m */ = {isa = PBXFileReference; name = "GCDWebServerFunctions.m"; path = "cordova-plugin-ionic-webview/GCDWebServerFunctions.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		A730E2703A584BAB8FF8ACE2 /* GCDWebServerRequest.m */ = {isa = PBXFileReference; name = "GCDWebServerRequest.m"; path = "cordova-plugin-ionic-webview/GCDWebServerRequest.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		D86414AD01184D15A892420E /* GCDWebServerResponse.m */ = {isa = PBXFileReference; name = "GCDWebServerResponse.m"; path = "cordova-plugin-ionic-webview/GCDWebServerResponse.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		7B7BD779758C4A0B9C4E1C9C /* GCDWebServerDataRequest.m */ = {isa = PBXFileReference; name = "GCDWebServerDataRequest.m"; path = "cordova-plugin-ionic-webview/GCDWebServerDataRequest.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		8E24AAF9F01E41219E5061EE /* GCDWebServerFileRequest.m */ = {isa = PBXFileReference; name = "GCDWebServerFileRequest.m"; path = "cordova-plugin-ionic-webview/GCDWebServerFileRequest.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		FDB96996CDF6457CADAAB584 /* GCDWebServerMultiPartFormRequest.m */ = {isa = PBXFileReference; name = "GCDWebServerMultiPartFormRequest.m"; path = "cordova-plugin-ionic-webview/GCDWebServerMultiPartFormRequest.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		827490507613422BA95151A7 /* GCDWebServerURLEncodedFormRequest.m */ = {isa = PBXFileReference; name = "GCDWebServerURLEncodedFormRequest.m"; path = "cordova-plugin-ionic-webview/GCDWebServerURLEncodedFormRequest.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		9305BD1C5DF0490B97B2648F /* GCDWebServerDataResponse.m */ = {isa = PBXFileReference; name = "GCDWebServerDataResponse.m"; path = "cordova-plugin-ionic-webview/GCDWebServerDataResponse.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		981EEF5E3429496FAA2292E3 /* GCDWebServerErrorResponse.m */ = {isa = PBXFileReference; name = "GCDWebServerErrorResponse.m"; path = "cordova-plugin-ionic-webview/GCDWebServerErrorResponse.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		AABB275EC4474E71A23CAA7D /* GCDWebServerFileResponse.m */ = {isa = PBXFileReference; name = "GCDWebServerFileResponse.m"; path = "cordova-plugin-ionic-webview/GCDWebServerFileResponse.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		BB47997D4A934111BF90A5AD /* GCDWebServerStreamedResponse.m */ = {isa = PBXFileReference; name = "GCDWebServerStreamedResponse.m"; path = "cordova-plugin-ionic-webview/GCDWebServerStreamedResponse.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		EC5A7C9CBEB544B6B4DECC7F /* CDVWKWebViewEngine.h */ = {isa = PBXFileReference; name = "CDVWKWebViewEngine.h"; path = "cordova-plugin-ionic-webview/CDVWKWebViewEngine.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F175E78B0C9A4410A4D439C8 /* CDVWKWebViewUIDelegate.h */ = {isa = PBXFileReference; name = "CDVWKWebViewUIDelegate.h"; path = "cordova-plugin-ionic-webview/CDVWKWebViewUIDelegate.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		30284702982D41D995E96C56 /* CDVWKProcessPoolFactory.h */ = {isa = PBXFileReference; name = "CDVWKProcessPoolFactory.h"; path = "cordova-plugin-ionic-webview/CDVWKProcessPoolFactory.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		1E0793E9B85C45229661F860 /* GCDWebServer.h */ = {isa = PBXFileReference; name = "GCDWebServer.h"; path = "cordova-plugin-ionic-webview/GCDWebServer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F42326EE30D34F3FB8346762 /* GCDWebServerConnection.h */ = {isa = PBXFileReference; name = "GCDWebServerConnection.h"; path = "cordova-plugin-ionic-webview/GCDWebServerConnection.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		6EA33B9D3B8C43388F8D6796 /* GCDWebServerFunctions.h */ = {isa = PBXFileReference; name = "GCDWebServerFunctions.h"; path = "cordova-plugin-ionic-webview/GCDWebServerFunctions.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		237DDBD25E28411982C3FBFD /* GCDWebServerHTTPStatusCodes.h */ = {isa = PBXFileReference; name = "GCDWebServerHTTPStatusCodes.h"; path = "cordova-plugin-ionic-webview/GCDWebServerHTTPStatusCodes.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B8AAFCB039D44186A2E6E21E /* GCDWebServerPrivate.h */ = {isa = PBXFileReference; name = "GCDWebServerPrivate.h"; path = "cordova-plugin-ionic-webview/GCDWebServerPrivate.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B10992A1EF0B4552AB859759 /* GCDWebServerRequest.h */ = {isa = PBXFileReference; name = "GCDWebServerRequest.h"; path = "cordova-plugin-ionic-webview/GCDWebServerRequest.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		4C33BAE510C049389E0DBCE8 /* GCDWebServerResponse.h */ = {isa = PBXFileReference; name = "GCDWebServerResponse.h"; path = "cordova-plugin-ionic-webview/GCDWebServerResponse.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		52F6FAC4AF4D480FBA59F260 /* GCDWebServerDataRequest.h */ = {isa = PBXFileReference; name = "GCDWebServerDataRequest.h"; path = "cordova-plugin-ionic-webview/GCDWebServerDataRequest.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		6DBA6D68495E4DFDBE2CA48E /* GCDWebServerFileRequest.h */ = {isa = PBXFileReference; name = "GCDWebServerFileRequest.h"; path = "cordova-plugin-ionic-webview/GCDWebServerFileRequest.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F157B06C7B62471DB338C602 /* GCDWebServerMultiPartFormRequest.h */ = {isa = PBXFileReference; name = "GCDWebServerMultiPartFormRequest.h"; path = "cordova-plugin-ionic-webview/GCDWebServerMultiPartFormRequest.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		4D70D0FEB1734588A85B6256 /* GCDWebServerURLEncodedFormRequest.h */ = {isa = PBXFileReference; name = "GCDWebServerURLEncodedFormRequest.h"; path = "cordova-plugin-ionic-webview/GCDWebServerURLEncodedFormRequest.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		8F3F8E3A8BC842F4AC11029D /* GCDWebServerDataResponse.h */ = {isa = PBXFileReference; name = "GCDWebServerDataResponse.h"; path = "cordova-plugin-ionic-webview/GCDWebServerDataResponse.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		21856CB71F554BE3B6FF9779 /* GCDWebServerErrorResponse.h */ = {isa = PBXFileReference; name = "GCDWebServerErrorResponse.h"; path = "cordova-plugin-ionic-webview/GCDWebServerErrorResponse.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		1435E50CE80B4A12BE71D7EF /* GCDWebServerFileResponse.h */ = {isa = PBXFileReference; name = "GCDWebServerFileResponse.h"; path = "cordova-plugin-ionic-webview/GCDWebServerFileResponse.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F7252B08A29F4AE1B33DADCB /* GCDWebServerStreamedResponse.h */ = {isa = PBXFileReference; name = "GCDWebServerStreamedResponse.h"; path = "cordova-plugin-ionic-webview/GCDWebServerStreamedResponse.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		97B04F883261431A8ECC9A07 /* WebKit.framework */ = {isa = PBXFileReference; name = "WebKit.framework"; path = "System/Library/Frameworks/WebKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		2FACA93485B84B9F9DB47DCD /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		AF6645EE8BC64C15ACD0B41B /* CDVSplashScreen.m */ = {isa = PBXFileReference; name = "CDVSplashScreen.m"; path = "cordova-plugin-splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		490EB8E4BD054450AAD0B684 /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		A402C3A660B04204B8BC25BD /* CDVSplashScreen.h */ = {isa = PBXFileReference; name = "CDVSplashScreen.h"; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		A24DDACDD7B64FD0BA319F0C /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		91AA74A656B74828AA3F43AF /* IonicKeyboard.m */ = {isa = PBXFileReference; name = "IonicKeyboard.m"; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E709A58CD93E4C69950F07BE /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0565D1491AEB4291B7893081 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; name = "GoogleMobileAds.framework"; path = "IonicBucket/Plugins/cordova-admob-sdk/GoogleMobileAds.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		62593A543703429682103ADF /* AdSupport.framework */ = {isa = PBXFileReference; name = "AdSupport.framework"; path = "System/Library/Frameworks/AdSupport.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		FB5A8E2BDA874F479959A4A9 /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		631FF31355B2439C8E3D35B4 /* AVFoundation.framework */ = {isa = PBXFileReference; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		7235DE0EA8C44BD58ACEB81F /* CoreBluetooth.framework */ = {isa = PBXFileReference; name = "CoreBluetooth.framework"; path = "System/Library/Frameworks/CoreBluetooth.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		2FF0894DA1584064BFB86A56 /* CoreMedia.framework */ = {isa = PBXFileReference; name = "CoreMedia.framework"; path = "System/Library/Frameworks/CoreMedia.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		75C79EFF01F844D5BD0D6160 /* CoreMotion.framework */ = {isa = PBXFileReference; name = "CoreMotion.framework"; path = "System/Library/Frameworks/CoreMotion.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		FB23F6AB7D06409195473ED7 /* CoreTelephony.framework */ = {isa = PBXFileReference; name = "CoreTelephony.framework"; path = "System/Library/Frameworks/CoreTelephony.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		F948B522DBE7465AA8640248 /* CoreVideo.framework */ = {isa = PBXFileReference; name = "CoreVideo.framework"; path = "System/Library/Frameworks/CoreVideo.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		489965384ADA466BAE3230CD /* EventKit.framework */ = {isa = PBXFileReference; name = "EventKit.framework"; path = "System/Library/Frameworks/EventKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		2FC6248DD52A4102BE9A948A /* EventKitUI.framework */ = {isa = PBXFileReference; name = "EventKitUI.framework"; path = "System/Library/Frameworks/EventKitUI.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		38099A50732347CF8C9B0A8B /* Foundation.framework */ = {isa = PBXFileReference; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		56DF911C1BE9483996261C33 /* GLKit.framework */ = {isa = PBXFileReference; name = "GLKit.framework"; path = "System/Library/Frameworks/GLKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		7C278CDB513F45FB8CA6483D /* MediaPlayer.framework */ = {isa = PBXFileReference; name = "MediaPlayer.framework"; path = "System/Library/Frameworks/MediaPlayer.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		1C6D4DA52FF44EDAA2EBE37E /* MessageUI.framework */ = {isa = PBXFileReference; name = "MessageUI.framework"; path = "System/Library/Frameworks/MessageUI.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		886BF7D73350409BB42900E2 /* OpenGLES.framework */ = {isa = PBXFileReference; name = "OpenGLES.framework"; path = "System/Library/Frameworks/OpenGLES.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		E6B4B94BF01A4BADA8A3515C /* SafariServices.framework */ = {isa = PBXFileReference; name = "SafariServices.framework"; path = "System/Library/Frameworks/SafariServices.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		818CA394800647F2BF0FFE1C /* StoreKit.framework */ = {isa = PBXFileReference; name = "StoreKit.framework"; path = "System/Library/Frameworks/StoreKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		85FA0146CC7B489194B98AD4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		8D8651E9BCB04F0B9EF0A10D /* UIKit.framework */ = {isa = PBXFileReference; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				A18578EDF62D422BAB72A6EB /* CoreLocation.framework in Frameworks */,
+				703F7D7C90374709AB249BB5 /* WebKit.framework in Frameworks */,
+				A196C48EF7A3401A997A04A8 /* libz.tbd in Frameworks */,
+				6BDCA4AFA20A45A99E52C2B1 /* GoogleMobileAds.framework in Frameworks */,
+				F9BBF94CA9844D379421F769 /* AdSupport.framework in Frameworks */,
+				F044BFEE5BA1422D87CDA6E2 /* AudioToolbox.framework in Frameworks */,
+				AD744A4E951A49F2AC3EA18F /* AVFoundation.framework in Frameworks */,
+				35708C5984624EB8BE9A3F02 /* CoreBluetooth.framework in Frameworks */,
+				446360DC44E34531AF85A5FC /* CoreMedia.framework in Frameworks */,
+				02CAE5995CFD4041AA244802 /* CoreMotion.framework in Frameworks */,
+				972B422CBB30496986537953 /* CoreTelephony.framework in Frameworks */,
+				7641B86EC475460E848BB4A0 /* CoreVideo.framework in Frameworks */,
+				63731A7D20E14A7B970E14E7 /* EventKit.framework in Frameworks */,
+				258B5B129B574DE38B42B716 /* EventKitUI.framework in Frameworks */,
+				18612EBCA34544FEBA5C9799 /* Foundation.framework in Frameworks */,
+				CDBA318938D04119B6524F32 /* GLKit.framework in Frameworks */,
+				7ED3D27414704927914A3E1C /* MediaPlayer.framework in Frameworks */,
+				722891BDF4AB4320947C20C3 /* MessageUI.framework in Frameworks */,
+				A7AA4EA663C04851A3CEF6AB /* OpenGLES.framework in Frameworks */,
+				6F71BFC4C5BF4F13A6A93E7A /* SafariServices.framework in Frameworks */,
+				D960407DE5F94649B3EDF976 /* StoreKit.framework in Frameworks */,
+				3E8F8FAAB539425DAA4EBBCB /* SystemConfiguration.framework in Frameworks */,
+				50460DC7BFAE4C9F861719A7 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				302D95EE14D2391D003F00A1 /* MainViewController.h */,
+				302D95EF14D2391D003F00A1 /* MainViewController.m */,
+				302D95F014D2391D003F00A1 /* MainViewController.xib */,
+				1D3623240D0F684500981E51 /* AppDelegate.h */,
+				1D3623250D0F684500981E51 /* AppDelegate.m */,
+			);
+			name = Classes;
+			path = "IonicBucket/Classes";
+			sourceTree = SOURCE_ROOT;
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* IonicBucket.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				EB87FDF41871DAF40020F90C /* config.xml */,
+				EB87FDF31871DA8E0020F90C /* www */,
+				EB87FDF11871DA420020F90C /* Staging */,
+				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				307C750510C5A3420062BCA9 /* Plugins */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* IonicBucket-Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */,
+			);
+			name = "Other Sources";
+			path = "IonicBucket";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0207DA571B56EA530066E2B4 /* Images.xcassets */,
+				3047A50E1AB8057F00498E2A /* config */,
+				8D1107310486CEB800E47090 /* IonicBucket-Info.plist */,
+				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
+			);
+			name = Resources;
+			path = "IonicBucket/Resources";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6F45E550DCA40A09A1CE0EA /* CoreLocation.framework */,
+				97B04F883261431A8ECC9A07 /* WebKit.framework */,
+				2FACA93485B84B9F9DB47DCD /* libz.tbd */,
+				0565D1491AEB4291B7893081 /* GoogleMobileAds.framework */,
+				62593A543703429682103ADF /* AdSupport.framework */,
+				FB5A8E2BDA874F479959A4A9 /* AudioToolbox.framework */,
+				631FF31355B2439C8E3D35B4 /* AVFoundation.framework */,
+				7235DE0EA8C44BD58ACEB81F /* CoreBluetooth.framework */,
+				2FF0894DA1584064BFB86A56 /* CoreMedia.framework */,
+				75C79EFF01F844D5BD0D6160 /* CoreMotion.framework */,
+				FB23F6AB7D06409195473ED7 /* CoreTelephony.framework */,
+				F948B522DBE7465AA8640248 /* CoreVideo.framework */,
+				489965384ADA466BAE3230CD /* EventKit.framework */,
+				2FC6248DD52A4102BE9A948A /* EventKitUI.framework */,
+				38099A50732347CF8C9B0A8B /* Foundation.framework */,
+				56DF911C1BE9483996261C33 /* GLKit.framework */,
+				7C278CDB513F45FB8CA6483D /* MediaPlayer.framework */,
+				1C6D4DA52FF44EDAA2EBE37E /* MessageUI.framework */,
+				886BF7D73350409BB42900E2 /* OpenGLES.framework */,
+				E6B4B94BF01A4BADA8A3515C /* SafariServices.framework */,
+				818CA394800647F2BF0FFE1C /* StoreKit.framework */,
+				85FA0146CC7B489194B98AD4 /* SystemConfiguration.framework */,
+				8D8651E9BCB04F0B9EF0A10D /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		301BF52E109A57CC0062928A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				301BF535109A57CC0062928A /* libCordova.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3047A50E1AB8057F00498E2A /* config */ = {
+			isa = PBXGroup;
+			children = (
+				3047A50F1AB8059700498E2A /* build-debug.xcconfig */,
+				3047A5101AB8059700498E2A /* build-release.xcconfig */,
+				3047A5111AB8059700498E2A /* build.xcconfig */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
+		307C750510C5A3420062BCA9 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				3DF9FA937B8F4301BCD3265B /* CDVAdMob.m */,
+				6D93E0E8F366425E93269AA4 /* CDVAdMob.h */,
+				5A3E7350C1334E0FBEB9FE0E /* CDVDevice.m */,
+				412B988DB4B44F7189E0B1CE /* CDVDevice.h */,
+				816228E5C93D423B8025F4BA /* CDVLocation.m */,
+				A1EDAE303E88479A879DE6DB /* CDVLocation.h */,
+				F76DC85519644BE5BD5284AA /* CDVWKWebViewEngine.m */,
+				4EE80523498C4F358F92FCA1 /* CDVWKWebViewUIDelegate.m */,
+				1375DE1AD4B9487784411C71 /* CDVWKProcessPoolFactory.m */,
+				6551D6DD6ECE426896D44C99 /* GCDWebServer.m */,
+				18E6A055516B40D0B0E08964 /* GCDWebServerConnection.m */,
+				33A1CBE2827C4E19B724F7B5 /* GCDWebServerFunctions.m */,
+				A730E2703A584BAB8FF8ACE2 /* GCDWebServerRequest.m */,
+				D86414AD01184D15A892420E /* GCDWebServerResponse.m */,
+				7B7BD779758C4A0B9C4E1C9C /* GCDWebServerDataRequest.m */,
+				8E24AAF9F01E41219E5061EE /* GCDWebServerFileRequest.m */,
+				FDB96996CDF6457CADAAB584 /* GCDWebServerMultiPartFormRequest.m */,
+				827490507613422BA95151A7 /* GCDWebServerURLEncodedFormRequest.m */,
+				9305BD1C5DF0490B97B2648F /* GCDWebServerDataResponse.m */,
+				981EEF5E3429496FAA2292E3 /* GCDWebServerErrorResponse.m */,
+				AABB275EC4474E71A23CAA7D /* GCDWebServerFileResponse.m */,
+				BB47997D4A934111BF90A5AD /* GCDWebServerStreamedResponse.m */,
+				EC5A7C9CBEB544B6B4DECC7F /* CDVWKWebViewEngine.h */,
+				F175E78B0C9A4410A4D439C8 /* CDVWKWebViewUIDelegate.h */,
+				30284702982D41D995E96C56 /* CDVWKProcessPoolFactory.h */,
+				1E0793E9B85C45229661F860 /* GCDWebServer.h */,
+				F42326EE30D34F3FB8346762 /* GCDWebServerConnection.h */,
+				6EA33B9D3B8C43388F8D6796 /* GCDWebServerFunctions.h */,
+				237DDBD25E28411982C3FBFD /* GCDWebServerHTTPStatusCodes.h */,
+				B8AAFCB039D44186A2E6E21E /* GCDWebServerPrivate.h */,
+				B10992A1EF0B4552AB859759 /* GCDWebServerRequest.h */,
+				4C33BAE510C049389E0DBCE8 /* GCDWebServerResponse.h */,
+				52F6FAC4AF4D480FBA59F260 /* GCDWebServerDataRequest.h */,
+				6DBA6D68495E4DFDBE2CA48E /* GCDWebServerFileRequest.h */,
+				F157B06C7B62471DB338C602 /* GCDWebServerMultiPartFormRequest.h */,
+				4D70D0FEB1734588A85B6256 /* GCDWebServerURLEncodedFormRequest.h */,
+				8F3F8E3A8BC842F4AC11029D /* GCDWebServerDataResponse.h */,
+				21856CB71F554BE3B6FF9779 /* GCDWebServerErrorResponse.h */,
+				1435E50CE80B4A12BE71D7EF /* GCDWebServerFileResponse.h */,
+				F7252B08A29F4AE1B33DADCB /* GCDWebServerStreamedResponse.h */,
+				AF6645EE8BC64C15ACD0B41B /* CDVSplashScreen.m */,
+				490EB8E4BD054450AAD0B684 /* CDVViewController+SplashScreen.m */,
+				A402C3A660B04204B8BC25BD /* CDVSplashScreen.h */,
+				A24DDACDD7B64FD0BA319F0C /* CDVViewController+SplashScreen.h */,
+				91AA74A656B74828AA3F43AF /* IonicKeyboard.m */,
+				E709A58CD93E4C69950F07BE /* IonicKeyboard.h */,
+			);
+			name = Plugins;
+			path = "IonicBucket/Plugins";
+			sourceTree = SOURCE_ROOT;
+		};
+		EB87FDF11871DA420020F90C /* Staging */ = {
+			isa = PBXGroup;
+			children = (
+				F840E1F0165FE0F500CFE078 /* config.xml */,
+				301BF56E109A69640062928A /* www */,
+			);
+			name = Staging;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* IonicBucket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "IonicBucket" */;
+			buildPhases = (
+				304B58A110DAC018002A0835 /* Copy www directory */,
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				301BF551109A68C00062928A /* PBXTargetDependency */,
+			);
+			name = "IonicBucket";
+			productName = "IonicBucket";
+			productReference = 1D6058910D05DD3D006BFB54 /* IonicBucket.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 510;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "__NON-CLI__" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 301BF52E109A57CC0062928A /* Products */;
+					ProjectRef = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* IonicBucket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		301BF535109A57CC0062928A /* libCordova.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCordova.a;
+			remoteRef = 301BF534109A57CC0062928A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
+				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
+				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		304B58A110DAC018002A0835 /* Copy www directory */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy www directory";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "NODEJS_PATH=/usr/local/bin; NVM_NODE_PATH=~/.nvm/versions/node/`nvm version 2>/dev/null`/bin; N_NODE_PATH=`find /usr/local/n/versions/node/* -maxdepth 0 -type d 2>/dev/null | tail -1`/bin; XCODE_NODE_PATH=`xcode-select --print-path`/usr/share/xcs/Node/bin; PATH=$NODEJS_PATH:$NVM_NODE_PATH:$N_NODE_PATH:$XCODE_NODE_PATH:$PATH && node cordova/lib/copy-www-build-step.js";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
+				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				213EF784E19A48ED93A5735A /* CDVAdMob.m in Sources */,
+				DE6D738580D24A51AC3F34A2 /* CDVDevice.m in Sources */,
+				69D4099EBDB54E69B59A1AD9 /* CDVLocation.m in Sources */,
+				686E7F495DC34706BF8B40F5 /* CDVWKWebViewEngine.m in Sources */,
+				9E211E7C785449AFA4E6E3C9 /* CDVWKWebViewUIDelegate.m in Sources */,
+				A1C16C7DBD484FC0B3DC3BA1 /* CDVWKProcessPoolFactory.m in Sources */,
+				1A97956782FF4BB3938234D8 /* GCDWebServer.m in Sources */,
+				1539221391D04239BFAAF227 /* GCDWebServerConnection.m in Sources */,
+				B4C5D81C86A64831B0AB3E45 /* GCDWebServerFunctions.m in Sources */,
+				80172FE2B810451FAF1B7C06 /* GCDWebServerRequest.m in Sources */,
+				475F930DD26F4840A237B4FD /* GCDWebServerResponse.m in Sources */,
+				401628DCA41446E7BBA0332B /* GCDWebServerDataRequest.m in Sources */,
+				325B38689B154E5A9D4A48A3 /* GCDWebServerFileRequest.m in Sources */,
+				24279D7CC56949DFB9FB0831 /* GCDWebServerMultiPartFormRequest.m in Sources */,
+				A6AC9A3E4F6C4394885FCEF3 /* GCDWebServerURLEncodedFormRequest.m in Sources */,
+				B75D99A8056D4FACB820D676 /* GCDWebServerDataResponse.m in Sources */,
+				CF51177C86E74406AB6085F2 /* GCDWebServerErrorResponse.m in Sources */,
+				706F0FBCECB54B9C89C55139 /* GCDWebServerFileResponse.m in Sources */,
+				30ED5CBEE0F243C8B70A9175 /* GCDWebServerStreamedResponse.m in Sources */,
+				2CD987105FF24F639A1E1558 /* CDVSplashScreen.m in Sources */,
+				F72C0C4FB29D48B3A12ECD74 /* CDVViewController+SplashScreen.m in Sources */,
+				20AF524F79E4419F93D07758 /* IonicKeyboard.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		301BF551109A68C00062928A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CordovaLib;
+			targetProxy = 301BF550109A68C00062928A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3047A50F1AB8059700498E2A /* build-debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IonicBucket/IonicBucket-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "IonicBucket/IonicBucket-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_NAME = "IonicBucket";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"IonicBucket/Plugins/cordova-admob-sdk\"",
+				);
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3047A5101AB8059700498E2A /* build-release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IonicBucket/IonicBucket-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "IonicBucket/IonicBucket-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_NAME = "IonicBucket";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"IonicBucket/Plugins/cordova-admob-sdk\"",
+				);
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3047A5111AB8059700498E2A /* build.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3047A5111AB8059700498E2A /* build.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "IonicBucket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "__NON-CLI__" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
