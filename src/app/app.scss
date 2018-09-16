@@ -34,8 +34,12 @@
         background: $orange;
         .item {
             background-color: transparent !important;
-            font-weight: 500 !important;
+            font-weight: 0px !important;
             padding-left: 30px !important;
         }
     }
+}
+
+.toolbar-title-md{
+    font-weight: 0px !important;
 }

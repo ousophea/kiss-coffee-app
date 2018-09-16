@@ -18,35 +18,35 @@
 
 <ion-content>
   <ion-list text-center padding>
-    <img src="assets/imgs/food.jpg">
-    <!-- <h2>{{ item.title }}</h2> -->
-    <h2>Double Cheese Burger (Beef)</h2>
-    <!-- <ion-badge color="orange" item-center>${{ item.rate_count }}</ion-badge> -->
-    <ion-badge color="orange" item-center>2</ion-badge>
-    <!-- <p>{{ item.title }} </p> -->
-    <p>Double Cheese Burger (Beef)</p>
+    <img [src]="item.thumbnail" class="thumbnail">
+    <h2>{{ item.title }}</h2>
+    <!-- <h2>Double Cheese Burger (Beef)</h2> -->
+    <ion-badge color="orange" item-center>${{ item.rate_count }}</ion-badge>
+    <!-- <ion-badge color="orange" item-center>2</ion-badge> -->
+    <p>{{ item.title }} </p>
+    <!-- <p>Double Cheese Burger (Beef)</p> -->
     <ion-row>
-          <ion-col col-4>
+          <ion-col col-3>
              
                 <ion-badge color="orange">Size:</ion-badge>
               
          </ion-col>
-         <ion-col col-2>
+         <ion-col col-3>
           
                
-              S  <ion-icon ios="ios-checkbox" md="md-checkbox"  color="orange"></ion-icon>
+              S  <ion-checkbox color="orange" checked="false"></ion-checkbox>
            
          </ion-col>
-         <ion-col col-2>
+         <ion-col col-3>
            
               
-              M  <ion-icon ios="ios-checkbox" md="md-checkbox"  color="orange"></ion-icon>
+              M  <ion-checkbox color="orange" checked="false"></ion-checkbox>
            
          </ion-col>
-         <ion-col col-2>
+         <ion-col col-3>
           
                
-              L  <ion-icon ios="ios-checkbox" md="md-checkbox"  color="orange"></ion-icon>
+              L  <ion-checkbox color="orange" checked="false"></ion-checkbox>
 
          </ion-col>
       </ion-row>
@@ -55,22 +55,23 @@
       <ion-row>
         <ion-col col-2></ion-col>
         <ion-col col-2>
-          <button ion-button round class='qtyminus' color="orange">
+          <button ion-button round  color="orange" (click)="minusQuantity(item)">
             <ion-icon name="remove"></ion-icon>
          </button>
         </ion-col>
-        <ion-col col-4>
-          <ion-input type='number' name='quantity' text-center value="1" class='qty'></ion-input>
+        <ion-col col-4 class="panel-qty">
+          <span class="qty">{{item.quantity||'0'}}</span>
         </ion-col>
         <ion-col col-2>
-          <button ion-button round class='qtyminus' color="orange">
+          <button ion-button round  color="orange" (click)="addQuantity(item)">
+            <!-- <button ion-button color="danger" clear>Danger Clear</button> -->
             <ion-icon name="add"></ion-icon>
          </button>
         </ion-col>
         <ion-col col-2></ion-col>
       </ion-row>
       <ion-row>
-        <button ion-button full round color="orange">{{'ITEM_DETAILS.BUTTON' | translate}}</button>
+        <button ion-button full round color="orange" (click)="AddToCart()">{{ item.slug }} To Cart</button>
       </ion-row>
     </ion-grid>
   </ion-list>

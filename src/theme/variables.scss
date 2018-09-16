@@ -39,12 +39,14 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  orange:     #d44322,
+  // orange:     #d44322,
+  orange:     #5c1dee,
   ash:        #efefef,
   white:      #fff,
 );
 
-$orange: #d44322;
+// $orange: #d44322;
+$orange: #5c1dee;
 $ash-light: #efefef;
 
 $radio-ios-color-on: $orange;

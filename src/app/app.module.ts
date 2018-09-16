@@ -11,7 +11,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Geolocation } from '@ionic-native/geolocation';
 import { AdmobFreeProvider } from '../providers/admob-free/admob-free';
 import { ServiceProvider } from '../providers/service/service';
+import { CacheModule } from "ionic-cache";
+
+// import { ReorderItemPage } from '../pages/reorder-item/reorder-item';
 import { FoodItemDetailsPage } from '../pages/food-item-details/food-item-details';
+import { FoodCategoryItemsPage } from '../pages/food-category-items/food-category-items';
 
 // By default TranslateLoader will look for translation json files in i18n/
 // So change this lool in the src/assets directory.
@@ -22,13 +26,17 @@ export function TranslateLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     MyApp,
-    FoodItemDetailsPage
+    FoodItemDetailsPage,
+    FoodCategoryItemsPage
+    // ReorderItemPage,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp, {
-      menuType: 'overlay'
+      menuType: 'overlay',
+      
     }),
+    CacheModule.forRoot({ keyPrefix: 'APP_ID' }),
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -36,12 +44,14 @@ export function TranslateLoaderFactory(http: HttpClient) {
         useFactory: (TranslateLoaderFactory),
         deps: [HttpClient]
       }
-    }),
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    FoodItemDetailsPage
+    FoodItemDetailsPage,
+    FoodCategoryItemsPage
+    // ReorderItemPage
   ],
   providers: [
     StatusBar,
@@ -51,6 +61,8 @@ export function TranslateLoaderFactory(http: HttpClient) {
     Geolocation,
     AdmobFreeProvider,
     ServiceProvider
+    
+
   ]
 })
 export class AppModule { }

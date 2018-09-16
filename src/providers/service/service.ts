@@ -12,7 +12,7 @@ import * as $ from 'jquery'
 export class ServiceProvider {
 
   BASH_URL:string = "http://www.dev-kiss.coffee.slor-ey.com/api/";
-  // BASH_URL:string = "http://localhost:8000/api/";
+  //BASH_URL:string = "http://localhost:8000/api/";
 
   constructor(public http: HttpClient) {
     console.log('Hello ServiceProvider Provider');
@@ -50,18 +50,18 @@ export class ServiceProvider {
     //     });
     // });
 
-    return $.ajax({
-      type: "GET",
-      // url:  this.apiUrl + type + '?APP_ID=' + this.APP_ID,             
-      url:  this.BASH_URL + url,       
-      contentType: 'application/json',       
-      success: function(response){
-           return response;
-      },
-      error: function(res, status, exception) {
-          console.log(res);
-      }
-    });
+    // return $.ajax({
+    //   type: "GET",
+    //   // url:  this.apiUrl + type + '?APP_ID=' + this.APP_ID,             
+    //   url:  this.BASH_URL + url,       
+    //   contentType: 'application/json',       
+    //   success: function(response){
+    //        return response;
+    //   },
+    //   error: function(res, status, exception) {
+    //       console.log(res);
+    //   }
+    // });
   }
 
   postURL(url, model){
@@ -101,5 +101,25 @@ export class ServiceProvider {
           console.log(res);
       }
     });
+
+  }
+
+  
+
+  deleteURL(url, model){
+    return $.ajax({
+      type: "DELETE",
+      // url:  this.apiUrl + type + '?APP_ID=' + this.APP_ID,                        
+      url:  this.BASH_URL + url + '?' + $.param(model),
+      contentType: 'application/x-www-form-urlencoded',                       
+      success: function(response){
+            // console.log('result', response);
+           return response;
+      },
+      error: function(res, status, exception) {
+          console.log(res);
+      }
+    });
+
   }
 }

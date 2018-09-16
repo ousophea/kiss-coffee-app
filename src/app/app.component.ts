@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
+// import { ReorderItemPage } from '../pages/reorder-item/reorder-item';
 // import { AdmobFreeProvider } from '../providers/admob-free/admob-free';
 
 @Component({
@@ -12,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = 'FirstLandingPage';
+  rootPage: any = 'FoodCategoriesPage';
 
   pages: Array<{ title: string, component: any, leftIcon: string }>;
 

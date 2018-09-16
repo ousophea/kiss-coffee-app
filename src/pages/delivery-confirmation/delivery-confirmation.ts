@@ -9,7 +9,7 @@
 
 
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController,AlertController } from 'ionic-angular';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @IonicPage()
@@ -23,6 +23,7 @@ export class DeliveryConfirmationPage {
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
+    public alertCtrl: AlertController,
     private formBuilder: FormBuilder,
     private menu: MenuController) {
     this.menu.enable(true); // Enable sidemenu
@@ -60,5 +61,14 @@ export class DeliveryConfirmationPage {
    */
   gotoPaymentPage() {
     this.navCtrl.setRoot('PaymentPage');
+  }
+  sendOrder()
+  {
+    const alert = this.alertCtrl.create({
+      title: 'Thank You!',
+      subTitle: 'Your order has been sent,Please wait for 20 minutes!',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 }

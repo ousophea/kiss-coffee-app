@@ -1,4 +1,9 @@
 page-cart {
+    
+    
+    .item-ios [item-right], .item-ios [item-end] {
+            margin-left: 0px;
+        }
     .item {
         border-bottom: 1.55px dashed #c8c7cc !important;
     }

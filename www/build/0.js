@@ -1,15 +1,15 @@
 webpackJsonp([0],{
 
-/***/ 297:
+/***/ 308:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeliveryTrackingPageModule", function() { return DeliveryTrackingPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__delivery_tracking__ = __webpack_require__(310);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__delivery_tracking__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -29,7 +29,7 @@ var DeliveryTrackingPageModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_2__delivery_tracking__["a" /* DeliveryTrackingPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__delivery_tracking__["a" /* DeliveryTrackingPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__delivery_tracking__["a" /* DeliveryTrackingPage */]),
             ],
         })
     ], DeliveryTrackingPageModule);
@@ -40,15 +40,15 @@ var DeliveryTrackingPageModule = (function () {
 
 /***/ }),
 
-/***/ 310:
+/***/ 324:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeliveryTrackingPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_config_map_style__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__assets_config_map_style__ = __webpack_require__(325);
 /**
  * @author    Ionic Bucket <ionicbucket@gmail.com>
  * @copyright Copyright (c) 2017
@@ -158,10 +158,10 @@ var DeliveryTrackingPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-delivery-tracking',template:/*ion-inline-start:"D:\Project\Ionic\KissCoffee\src\pages\delivery-tracking\delivery-tracking.html"*/'<!-- \n  - @author    Ionic Bucket <ionicbucket@gmail.com>\n  - @copyright Copyright (c) 2017\n  - @license   Fulcrumy\n-->\n<!-- Delivery Tracking Page -->\n\n<ion-header no-border>\n  <ion-navbar color="orange" hideBackButton>\n    <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    <ion-title>{{\'DELIVERY_TRACKING.TITLE\' | translate}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content id="google-v1">\n  <div id="order-info">\n    <ion-grid>\n      <ion-row>\n        <ion-col col-2 text-center>\n          <ion-fab edge>\n            <button ion-fab mini color="dark"><ion-icon name="checkmark"></ion-icon></button>\n          </ion-fab>\n        </ion-col>\n        <ion-col col-2 text-center [ngClass]="this.platform.dir()===\'ltr\'? \'dot-left\': \'dot-right\'">\n          <span>  ..... </span>\n        </ion-col>\n        <ion-col col-2 text-center>\n          <ion-fab edge>\n            <button ion-fab mini color="dark"><ion-icon name="checkmark"></ion-icon></button>\n          </ion-fab>\n        </ion-col>\n        <ion-col col-2 text-center [ngClass]="this.platform.dir()===\'ltr\'? \'dot-left\': \'dot-right\'">\n          <span>  ..... </span>\n        </ion-col>\n        <ion-col col-2 text-center>\n          <ion-fab edge>\n            <button ion-fab mini color="light"><ion-icon name="checkmark"></ion-icon></button>\n          </ion-fab>\n        </ion-col>\n      </ion-row>\n      <ion-row class="custom-row">\n        <ion-col col-4 text-center>\n          Delivery\n        </ion-col>\n        <ion-col col-4 text-center>\n          Confirm\n        </ion-col>\n        <ion-col col-4 text-center>\n          Received\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </div>\n  <div id="track-info">\n    <p class="track-title">Order Confirmed!</p>\n    <p class="track-des">Mark is on the way with your order.</p>\n  </div>\n  <div #map id="map"></div>\n  <div id="delivery-details">\n    <ion-grid>\n      <ion-row>\n        <ion-col col-6 class="left">\n          <p class="title">Delivery Address</p>\n          <address>\n            395 Middleville Road<br> Los Angeles, CA<br> California\n          </address>\n        </ion-col>\n        <ion-col col-6 class="right">\n          <p><b>Order ID:  #123123</b></p>\n          <p>Mark Rich</p>\n          <p>626-451-3030</p>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </div>\n</ion-content>'/*ion-inline-end:"D:\Project\Ionic\KissCoffee\src\pages\delivery-tracking\delivery-tracking.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */]])
     ], DeliveryTrackingPage);
     return DeliveryTrackingPage;
 }());
@@ -170,7 +170,7 @@ var DeliveryTrackingPage = (function () {
 
 /***/ }),
 
-/***/ 311:
+/***/ 325:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

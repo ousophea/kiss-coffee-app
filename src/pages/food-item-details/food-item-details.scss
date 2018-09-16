@@ -2,4 +2,31 @@ page-food-item-details {
     img {
         width: 100%;
     }
+    .thumbnail{
+        padding-top:0px !important;
+        max-height:250px;
+    }
+    // .qty{
+    //     margin-left: 20px;
+    // }
+    .panel-qty{
+        padding-top:21px !important;
+        padding-right:7px !important;
+        padding-bottom:0px !important;
+        padding-left:7px !important;
+    }
+    // .scroll-content{
+    //     margin-top: 36px;
+    // }
+    // .footer{
+    //    position: relative;
+    //    margin-bottom:-10px; 
+    // }
+    // .grid {
+    //     // padding: 20px !important;
+    //     padding-top:0px !important;
+    //     padding-right:0px !important;
+    //     padding-bottom:10px !important;
+    //     padding-left:0px !important;    
+    // }
 }
