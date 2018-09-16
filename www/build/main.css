@@ -33758,6 +33758,41 @@ page-payment .tag {
   color: #424242;
 }
 
+page-reorder-item .item {
+  border-bottom: 1.55px dashed #c8c7cc !important;
+}
+
+page-reorder-item .item-inner {
+  border-bottom: 0px !important;
+}
+
+page-reorder-item .item:first-child {
+  border-top: 1.55px dashed #c8c7cc !important;
+}
+
+page-reorder-item .item:last-child {
+  border-bottom: 1.55px dashed #c8c7cc !important;
+}
+
+page-reorder-item .grid {
+  padding: 0px !important;
+}
+
+page-reorder-item .grid .col .button {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+page-reorder-item .total {
+  font-size: 22px !important;
+  font-weight: bold;
+}
+
+page-reorder-item .total-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 page-second-landing .background {
   top: 0;
   right: 0;
