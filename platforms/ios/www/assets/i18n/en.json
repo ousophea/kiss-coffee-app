@@ -2,54 +2,54 @@
   "LANGUAGE": "English Language",
   "SIDEBAR_List": [
     {
-      "NAME": "Landing Page",
-      "COMPONENT": "FirstLandingPage",
-      "ICON": "home"
-    },
-    {
-      "NAME": "User Info",
-      "COMPONENT": "UserInformationPage",
-      "ICON": "information"
-    },
-    {
-      "NAME": "Food Categories",
+      "NAME": "Home",
       "COMPONENT": "FoodCategoriesPage",
-      "ICON": "keypad"
+      "ICON": "ios-home-outline"
     },
     {
       "NAME": "Cart",
       "COMPONENT": "CartPage",
-      "ICON": "cart"
+      "ICON": "ios-cart-outline"
     },
     {
-      "NAME": "Delivery Confirmation",
+      "NAME": "Delivery Confirm",
       "COMPONENT": "DeliveryConfirmationPage",
-      "ICON": "basket"
-    },
-    {
-      "NAME": "Payment",
-      "COMPONENT": "PaymentPage",
-      "ICON": "flame"
+      "ICON": "ios-basket-outline"
     },
     {
       "NAME": "Delivery Tracking",
       "COMPONENT": "DeliveryTrackingPage",
-      "ICON": "paper-plane"
+      "ICON": "ios-paper-plane-outline"
     },
     {
       "NAME": "Settings",
       "COMPONENT": "SettingsPage",
-      "ICON": "settings"
+      "ICON": "ios-settings-outline"
+    },
+    {
+      "NAME": "User Info",
+      "COMPONENT": "UserInformationPage",
+      "ICON": "ios-information-circle-outline"
+    },
+    {
+      "NAME": "Re-Order",
+      "COMPONENT": "ReorderItemPage",
+      "ICON": "md-reorder"
+    },
+    {
+      "NAME": "Join Member",
+      "COMPONENT": "UserInformationPage",
+      "ICON": "ios-person-add-outline"
     },
     {
       "NAME": "Contact",
       "COMPONENT": "ContactPage",
-      "ICON": "contact"
+      "ICON": "ios-contact-outline"
     },
     {
       "NAME": "About Us",
       "COMPONENT": "AboutUsPage",
-      "ICON": "information-circle"
+      "ICON": "ios-book-outline"
     }
   ],
   "LANGUAGES": [

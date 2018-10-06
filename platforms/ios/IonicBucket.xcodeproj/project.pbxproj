@@ -61,6 +61,8 @@
 		D960407DE5F94649B3EDF976 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818CA394800647F2BF0FFE1C /* StoreKit.framework */; };
 		3E8F8FAAB539425DAA4EBBCB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FA0146CC7B489194B98AD4 /* SystemConfiguration.framework */; };
 		50460DC7BFAE4C9F861719A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8651E9BCB04F0B9EF0A10D /* UIKit.framework */; };
+		AAEAFFA5F1BB4C3D8905567A /* CDVAdMob.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E52CA36E6A4015834A1B50 /* CDVAdMob.m */; };
+		8A8B6C06B7F74B1EB658AEFC /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406C93CECF3347A282383739 /* GoogleMobileAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +172,9 @@
 		818CA394800647F2BF0FFE1C /* StoreKit.framework */ = {isa = PBXFileReference; name = "StoreKit.framework"; path = "System/Library/Frameworks/StoreKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		85FA0146CC7B489194B98AD4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		8D8651E9BCB04F0B9EF0A10D /* UIKit.framework */ = {isa = PBXFileReference; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		C1E52CA36E6A4015834A1B50 /* CDVAdMob.m */ = {isa = PBXFileReference; name = "CDVAdMob.m"; path = "lycwed-cordova-plugin-admob-free/CDVAdMob.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		1DA6F4A02BAD4E0D93ED1596 /* CDVAdMob.h */ = {isa = PBXFileReference; name = "CDVAdMob.h"; path = "lycwed-cordova-plugin-admob-free/CDVAdMob.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		406C93CECF3347A282383739 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; name = "GoogleMobileAds.framework"; path = "IonicBucket/Plugins/lycwed-cordova-plugin-admob-free/GoogleMobileAds.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +206,7 @@
 				D960407DE5F94649B3EDF976 /* StoreKit.framework in Frameworks */,
 				3E8F8FAAB539425DAA4EBBCB /* SystemConfiguration.framework in Frameworks */,
 				50460DC7BFAE4C9F861719A7 /* UIKit.framework in Frameworks */,
+				8A8B6C06B7F74B1EB658AEFC /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +300,7 @@
 				818CA394800647F2BF0FFE1C /* StoreKit.framework */,
 				85FA0146CC7B489194B98AD4 /* SystemConfiguration.framework */,
 				8D8651E9BCB04F0B9EF0A10D /* UIKit.framework */,
+				406C93CECF3347A282383739 /* GoogleMobileAds.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -365,6 +372,8 @@
 				A24DDACDD7B64FD0BA319F0C /* CDVViewController+SplashScreen.h */,
 				91AA74A656B74828AA3F43AF /* IonicKeyboard.m */,
 				E709A58CD93E4C69950F07BE /* IonicKeyboard.h */,
+				C1E52CA36E6A4015834A1B50 /* CDVAdMob.m */,
+				1DA6F4A02BAD4E0D93ED1596 /* CDVAdMob.h */,
 			);
 			name = Plugins;
 			path = "IonicBucket/Plugins";
@@ -499,6 +508,7 @@
 				2CD987105FF24F639A1E1558 /* CDVSplashScreen.m in Sources */,
 				F72C0C4FB29D48B3A12ECD74 /* CDVViewController+SplashScreen.m in Sources */,
 				20AF524F79E4419F93D07758 /* IonicKeyboard.m in Sources */,
+				AAEAFFA5F1BB4C3D8905567A /* CDVAdMob.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +547,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"IonicBucket/Plugins/cordova-admob-sdk\"",
+					"\"IonicBucket/Plugins/lycwed-cordova-plugin-admob-free\"",
 				);
 			};
 			name = Debug;
@@ -563,6 +574,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"IonicBucket/Plugins/cordova-admob-sdk\"",
+					"\"IonicBucket/Plugins/lycwed-cordova-plugin-admob-free\"",
 				);
 			};
 			name = Release;

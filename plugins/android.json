@@ -22,10 +22,16 @@
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
     },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
+    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
     },
     "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
+    },
+    "lycwed-cordova-plugin-admob-free": {
       "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
     }
   },

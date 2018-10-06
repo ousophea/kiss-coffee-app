@@ -5,22 +5,78 @@
   },
   "config_munge": {
     "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"name.ratson.cordova.admob.AdMob\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 2
+            },
+            {
+              "xml": "<feature name=\"Geolocation\"><param name=\"android-package\" value=\"org.apache.cordova.geolocation.Geolocation\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"io.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<allow-navigation href=\"http://localhost:8080/*\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"webView\" value=\"com.ionicframework.cordova.webview.IonicWebViewEngine\" />",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"IonicWebView\"><param name=\"android-package\" value=\"com.ionicframework.cordova.webview.IonicWebView\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" onload=\"true\" value=\"io.ionic.keyboard.IonicKeyboard\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
       "AndroidManifest.xml": {
         "parents": {
           "/manifest/application": [
             {
               "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
-              "count": 1
+              "count": 2
             }
           ],
           "/*": [
             {
               "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-              "count": 1
+              "count": 2
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-              "count": 1
+              "count": 2
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
@@ -36,40 +92,37 @@
             }
           ]
         }
-      },
-      "res/xml/config.xml": {
-        "parents": {
-          "/*": [
-            {
-              "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"name.ratson.cordova.admob.AdMob\" /><param name=\"onload\" value=\"true\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"Geolocation\"><param name=\"android-package\" value=\"org.apache.cordova.geolocation.Geolocation\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"io.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
-              "count": 1
-            }
-          ]
-        }
       }
     }
   },
   "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-admob-free": {
+      "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
+    },
     "cordova-admob-sdk": {
       "PLAY_SERVICES_VERSION": "11.0.4",
       "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
@@ -77,40 +130,51 @@
     "cordova-promise-polyfill": {
       "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
     },
-    "cordova-plugin-admob-free": {
-      "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
-    },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
-    },
-    "cordova-plugin-geolocation": {
-      "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
-    },
-    "cordova-plugin-ionic-webview": {
-      "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
-    },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
-    },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
-    },
-    "ionic-plugin-keyboard": {
+    "lycwed-cordova-plugin-admob-free": {
       "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
     }
   },
   "dependent_plugins": {},
   "modules": [
     {
-      "id": "cordova-promise-polyfill.Promise",
-      "file": "plugins/cordova-promise-polyfill/www/Promise.js",
-      "pluginId": "cordova-promise-polyfill",
-      "runs": true
+      "id": "cordova-plugin-statusbar.statusbar",
+      "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+      "pluginId": "cordova-plugin-statusbar",
+      "clobbers": [
+        "window.StatusBar"
+      ]
     },
     {
-      "id": "cordova-promise-polyfill.promise.min",
-      "file": "plugins/cordova-promise-polyfill/www/promise.min.js",
-      "pluginId": "cordova-promise-polyfill"
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
+    },
+    {
+      "id": "cordova-plugin-splashscreen.SplashScreen",
+      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+      "pluginId": "cordova-plugin-splashscreen",
+      "clobbers": [
+        "navigator.splashscreen"
+      ]
+    },
+    {
+      "id": "cordova-plugin-ionic-webview.IonicWebView",
+      "file": "plugins/cordova-plugin-ionic-webview/src/www/util.js",
+      "pluginId": "cordova-plugin-ionic-webview",
+      "clobbers": [
+        "Ionic.WebView"
+      ]
+    },
+    {
+      "id": "cordova-plugin-ionic-keyboard.keyboard",
+      "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
+      "pluginId": "cordova-plugin-ionic-keyboard",
+      "clobbers": [
+        "window.Keyboard"
+      ]
     },
     {
       "id": "cordova-plugin-admob-free.AdMob",
@@ -120,14 +184,6 @@
         "admob",
         "AdMob",
         "plugins.AdMob"
-      ]
-    },
-    {
-      "id": "cordova-plugin-device.device",
-      "file": "plugins/cordova-plugin-device/www/device.js",
-      "pluginId": "cordova-plugin-device",
-      "clobbers": [
-        "device"
       ]
     },
     {
@@ -145,14 +201,6 @@
       "runs": true
     },
     {
-      "id": "cordova-plugin-splashscreen.SplashScreen",
-      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-      "pluginId": "cordova-plugin-splashscreen",
-      "clobbers": [
-        "navigator.splashscreen"
-      ]
-    },
-    {
       "id": "ionic-plugin-keyboard.keyboard",
       "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
       "pluginId": "ionic-plugin-keyboard",
@@ -160,17 +208,41 @@
         "cordova.plugins.Keyboard"
       ],
       "runs": true
+    },
+    {
+      "id": "cordova-promise-polyfill.Promise",
+      "file": "plugins/cordova-promise-polyfill/www/Promise.js",
+      "pluginId": "cordova-promise-polyfill",
+      "runs": true
+    },
+    {
+      "id": "cordova-promise-polyfill.promise.min",
+      "file": "plugins/cordova-promise-polyfill/www/promise.min.js",
+      "pluginId": "cordova-promise-polyfill"
+    },
+    {
+      "id": "lycwed-cordova-plugin-admob-free.AdMob",
+      "file": "plugins/lycwed-cordova-plugin-admob-free/www/admob.js",
+      "pluginId": "lycwed-cordova-plugin-admob-free",
+      "clobbers": [
+        "admob",
+        "AdMob",
+        "plugins.AdMob"
+      ]
     }
   ],
   "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.3",
+    "cordova-plugin-statusbar": "2.4.2",
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-ionic-webview": "2.1.3",
+    "cordova-plugin-ionic-keyboard": "2.1.2",
+    "cordova-plugin-admob-free": "0.13.0",
+    "cordova-plugin-geolocation": "4.0.1",
+    "ionic-plugin-keyboard": "2.2.1",
     "cordova-admob-sdk": "0.13.1",
     "cordova-promise-polyfill": "0.0.2",
-    "cordova-plugin-admob-free": "0.13.0",
-    "cordova-plugin-device": "1.1.7",
-    "cordova-plugin-geolocation": "4.0.1",
-    "cordova-plugin-ionic-webview": "1.1.16",
-    "cordova-plugin-splashscreen": "4.1.0",
-    "cordova-plugin-whitelist": "1.3.3",
-    "ionic-plugin-keyboard": "2.2.1"
+    "lycwed-cordova-plugin-admob-free": "1.0.6"
   }
 }

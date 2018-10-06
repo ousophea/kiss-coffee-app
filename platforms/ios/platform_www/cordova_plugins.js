@@ -85,6 +85,16 @@ module.exports = [
     "id": "cordova-promise-polyfill.promise.min",
     "file": "plugins/cordova-promise-polyfill/www/promise.min.js",
     "pluginId": "cordova-promise-polyfill"
+  },
+  {
+    "id": "lycwed-cordova-plugin-admob-free.AdMob",
+    "file": "plugins/lycwed-cordova-plugin-admob-free/www/admob.js",
+    "pluginId": "lycwed-cordova-plugin-admob-free",
+    "clobbers": [
+      "admob",
+      "AdMob",
+      "plugins.AdMob"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -98,7 +108,8 @@ module.exports.metadata =
   "cordova-plugin-whitelist": "1.3.3",
   "ionic-plugin-keyboard": "2.2.1",
   "cordova-admob-sdk": "0.13.1",
-  "cordova-promise-polyfill": "0.0.2"
+  "cordova-promise-polyfill": "0.0.2",
+  "lycwed-cordova-plugin-admob-free": "1.0.6"
 };
 // BOTTOM OF METADATA
 });

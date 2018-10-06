@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
+import { StatusBar } from '@ionic-native/status-bar';
 // import { ReorderItemPage } from '../pages/reorder-item/reorder-item';
 // import { AdmobFreeProvider } from '../providers/admob-free/admob-free';
 
@@ -32,7 +32,12 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
+      // this.statusBar.styleDefault();
+      // let status bar overlay webview
+      this.statusBar.overlaysWebView(true);
+
+      // set status bar to white
+      this.statusBar.backgroundColorByHexString('#5c1dee');
       this.splashScreen.hide();
       this.getSidebarList();
 

@@ -27,6 +27,9 @@
     },
     "cordova-plugin-admob-free": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "lycwed-cordova-plugin-admob-free": {
+      "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
     }
   },
   "dependent_plugins": {

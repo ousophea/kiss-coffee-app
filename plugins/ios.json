@@ -27,6 +27,9 @@
     },
     "ionic-plugin-keyboard": {
       "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
+    },
+    "lycwed-cordova-plugin-admob-free": {
+      "PACKAGE_NAME": "com.ionicbucket.fooddeliveryapp"
     }
   },
   "dependent_plugins": {

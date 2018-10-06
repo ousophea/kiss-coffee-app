@@ -57,6 +57,16 @@ module.exports = [
         "file": "plugins/cordova-promise-polyfill/www/promise.min.js",
         "id": "cordova-promise-polyfill.promise.min",
         "pluginId": "cordova-promise-polyfill"
+    },
+    {
+        "file": "plugins/lycwed-cordova-plugin-admob-free/www/admob.js",
+        "id": "lycwed-cordova-plugin-admob-free.AdMob",
+        "pluginId": "lycwed-cordova-plugin-admob-free",
+        "clobbers": [
+            "admob",
+            "AdMob",
+            "plugins.AdMob"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -70,7 +80,8 @@ module.exports.metadata =
     "cordova-plugin-geolocation": "4.0.1",
     "cordova-plugin-admob-free": "0.13.0",
     "cordova-promise-polyfill": "0.0.2",
-    "cordova-admob-sdk": "0.13.1"
+    "cordova-admob-sdk": "0.13.1",
+    "lycwed-cordova-plugin-admob-free": "1.0.6"
 }
 // BOTTOM OF METADATA
 });

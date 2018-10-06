@@ -9,7 +9,7 @@
 
 
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController, AlertController  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, AlertController, LoadingController  } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { ServiceProvider } from '../../providers/service/service';
 import { FoodItemDetailsPage } from '../food-item-details/food-item-details';
@@ -27,6 +27,7 @@ export class CartPage {
     public navParams: NavParams,
     public http:HttpClient,
     public alertCtrl: AlertController,
+    public loadingCtrl: LoadingController,
     public serviceProvider:ServiceProvider,
     private menu: MenuController) {
     this.menu.enable(true);
@@ -96,7 +97,14 @@ export class CartPage {
   }
   getSartpage()
   {
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+
+    loading.present();
+
     this.http.get(this.serviceProvider.BASH_URL+'cart').subscribe((data:any)=>{
+      loading.dismiss();
       this.total=data.data[0].total;
       //console.log(this.total)
       data.data[0].item_to_purchase.forEach(element => {
